@@ -1,5 +1,5 @@
 export default function Home () {
     return (
-        <h1>wjkles</h1>
+        <h1 className="flex justify-center place-center">AiVolution</h1>
     )
 }

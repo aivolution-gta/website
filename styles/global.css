@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
+}
+
+html {
+    background-color: #FAEDC0;
 }
 
 h1 {
