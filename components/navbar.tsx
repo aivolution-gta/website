@@ -21,7 +21,7 @@ const links = [
 
 export default function Navbar () {
     return (
-        <div>
+        <div className="font-bold flex justify-evenly z-20">
             {links.map(({ name, link, id }) => 
                 <Link
                     key={name}
