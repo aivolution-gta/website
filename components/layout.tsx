@@ -14,9 +14,10 @@ export default function Layout ({ children }: { children: ReactNode }) {
         offset: ["start start", "end start"],
     });
 
-    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
 
-    const title = `AiVolution | ${router.pathname=="/" ? "Home" : router.pathname}`;
+    const currentRoute = router.pathname=="/" ? "Home" : router.pathname
+    const title = `AiVolution | ${currentRoute}`;
     const description = "An AI conference near you!";
 
     return (
@@ -28,7 +29,7 @@ export default function Layout ({ children }: { children: ReactNode }) {
 
             <div className="w-full h-[96rem] overflow-hidden relative grid place-items-center">
                 <motion.div
-                    className="relative z-20"
+                    className="relative z-20 h-full w-full"
                 >
                     <Navbar />
                     {children}
@@ -36,17 +37,13 @@ export default function Layout ({ children }: { children: ReactNode }) {
                 <motion.div
                     className="absolute inset-0 z-10"
                     style={{
-                        backgroundImage: `url(/background-images/pexels-pixabay-531880.jpg)`,
-                        backgroundPosition: "bottom",
+                        backgroundImage: `url(/background-images/${currentRoute}.png)`,
+                        backgroundPosition: "top",
                         backgroundSize: "cover",
                         y: backgroundY,
                     }}
                 />
             </div>
-
-            <div className="my-96" />
-            <div className="my-96" />
-            <div className="my-96" />
         </div>
         
     )
