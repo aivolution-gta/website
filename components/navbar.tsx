@@ -14,8 +14,8 @@ const links = [
         id: "1",
     },
     {
-        name: "team",
-        link: "/team",
+        name: "contact",
+        link: "/contact",
         id: "2",
     },
     {
