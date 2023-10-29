@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
 
 * {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: bold;
     scroll-behavior: smooth;
     user-select: none;
@@ -17,14 +17,18 @@ html {
 
 h1 {
     font-size: 100px;
-    letter-spacing: -6px;
+    letter-spacing: 2px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 4px;
 }
 
 h2 {
-    font-size: 50px ;
-    letter-spacing: 3px;
+    font-size: 50px;
+    letter-spacing: 4px;
     -webkit-text-stroke-color: black;
-    
+    -webkit-text-stroke-width: 2px;
+}
+
+p{
+    font-family: 'Outfit', sans-serif;
 }
