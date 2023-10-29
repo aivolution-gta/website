@@ -18,7 +18,6 @@ export default function Layout ({ children }: { children: ReactNode }) {
 
     const currentRoute = router.pathname=="/" ? "Home" : router.pathname
     const title = `AiVolution | ${currentRoute}`;
-    const stylesheet = `styles/global.css`
     const description = "An AI conference near you!";
 
     return (
@@ -27,7 +26,7 @@ export default function Layout ({ children }: { children: ReactNode }) {
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap');
+                    @import url('https://fonts.googleapis.com/css2?family=Outfit&family=Poppins&display=swap');
                 </style>
             </Head>
 

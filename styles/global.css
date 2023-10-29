@@ -5,17 +5,22 @@
 
 
 * {
-    font-family: 'Outfit', sans-serif;
+    font-family: "Poppins";
     font-weight: bold;
     scroll-behavior: smooth;
-    user-select: none;
 }
+
+::selection {
+    background: #554C89;
+    color: white;
+  }
 
 html {
     /* background-color: #FAEDC0; */
 }
 
 h1 {
+    font-family: "Poppins";
     font-size: 100px;
     letter-spacing: 2px;
     -webkit-text-stroke-color: black;
@@ -23,12 +28,9 @@ h1 {
 }
 
 h2 {
+    font-family: "Poppins";
     font-size: 50px;
-    letter-spacing: 4px;
+    /* letter-spacing: 1px; */
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 2px;
-}
-
-p{
-    font-family: 'Outfit', sans-serif;
 }
