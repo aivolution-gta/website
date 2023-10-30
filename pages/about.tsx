@@ -1,3 +1,7 @@
+import { Carousel } from "@material-tailwind/react";
+import Image from "next/image"
+import Placeholder from "../public/background-images/wood-blog-placeholder.png"
+
 export default function About () {
     return (
         <div className="w-screen">
@@ -20,11 +24,26 @@ export default function About () {
 
             {/* Section 2 */}
             <div className="bg-mid-purple py-20">
-                <div>
-                    <div className="w-full">
-                        <h1 className="flex justify-center place-center my-20 opacity-75 my-0">Who Are We</h1>
-                    </div>
+                <div className="w-full">
+                    <h1 className="flex justify-center place-center my-20 opacity-75 my-0">Who Are We</h1>
                 </div>
+                <Carousel className="rounded-xl w-1/2">
+                    <Image
+                        src={Placeholder}
+                        alt="image 1"
+                        className="h-full w-full object-cover"
+                    />
+                    <Image
+                        src={Placeholder}
+                        alt="image 2"
+                        className="h-full w-full object-cover"
+                    />
+                    <Image
+                        src={Placeholder}
+                        alt="image 3"
+                        className="h-full w-full object-cover"
+                    />
+                </Carousel>
             </div>
             
         </div>  
