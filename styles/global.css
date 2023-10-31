@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 * {
     font-family: "Poppins";
     font-weight: bold;
@@ -23,14 +21,10 @@ h1 {
     font-family: "Poppins";
     font-size: 100px;
     letter-spacing: 2px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 4px;
 }
 
 h2 {
     font-family: "Poppins";
     font-size: 50px;
     /* letter-spacing: 1px; */
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 2px;
 }

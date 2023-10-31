@@ -1,6 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
 import Image from "next/image"
 import Placeholder from "../public/background-images/wood-blog-placeholder.png"
+import Team from "@/components/team/team";
 
 export default function About () {
     return (
@@ -27,23 +28,27 @@ export default function About () {
                 <div className="w-full">
                     <h1 className="flex justify-center place-center my-20 opacity-75 my-0">Who Are We</h1>
                 </div>
-                <Carousel className="rounded-xl w-1/2">
-                    <Image
-                        src={Placeholder}
-                        alt="image 1"
-                        className="h-full w-full object-cover"
-                    />
-                    <Image
-                        src={Placeholder}
-                        alt="image 2"
-                        className="h-full w-full object-cover"
-                    />
-                    <Image
-                        src={Placeholder}
-                        alt="image 3"
-                        className="h-full w-full object-cover"
-                    />
-                </Carousel>
+                {/* <div className="w-full flex justify-center">
+                    <Carousel className="rounded-xl w-1/2">
+                        <Image
+                            src={Placeholder}
+                            alt="image 1"
+                            className="h-full w-full object-cover"
+                        />
+                        <Image
+                            src={Placeholder}
+                            alt="image 2"
+                            className="h-full w-full object-cover"
+                        />
+                        <Image
+                            src={Placeholder}
+                            alt="image 3"
+                            className="h-full w-full object-cover"
+                        />
+                    </Carousel>
+                </div> */}
+                <Team />
+                
             </div>
             
         </div>  

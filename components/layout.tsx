@@ -30,7 +30,7 @@ export default function Layout ({ children }: { children: ReactNode }) {
                 </style>
             </Head>
 
-            <div className="w-full h-[96rem] overflow-hidden relative grid place-items-center">
+            <div className="w-full h-[140rem] overflow-hidden relative grid place-items-center">
                 <motion.div
                     className="relative z-20 h-full w-full"
                 >
