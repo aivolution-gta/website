@@ -17,7 +17,13 @@ html {
 
 h1 {
     font-size: 100px;
-    letter-spacing: -6px;
+    letter-spacing: -3px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 4px;
+}
+
+h2 {
+    font-size: 40px;
+    -webkit-text-stroke-color: black;
+    letter-spacing: -1px;
 }
