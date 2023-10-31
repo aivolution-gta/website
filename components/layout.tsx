@@ -26,7 +26,7 @@ export default function Layout ({ children }: { children: ReactNode }) {
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Outfit&family=Poppins&display=swap');
+                    @import url(https://fonts.googleapis.com/css2?family=Outfit&family=Poppins&display=swap);
                 </style>
             </Head>
 
