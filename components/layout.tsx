@@ -13,7 +13,6 @@ function getNames (routerPathname: string) {
         bgImageName = "home";
     } else {
         const routerName = routerPathname.slice(1);
-        console.log("ROUTER NAME: ", routerName)
         const words = routerName.split('-');
         const capitalizedWords = words.map((word) => {
             if (word.length > 0) {
@@ -44,8 +43,6 @@ export default function Layout ({ children }: { children: ReactNode }) {
     const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
 
     const names = getNames(router.pathname);
-    console.log(router.pathname);
-    console.log(names);
     const description = "An AI conference near you!";
 
     return (
