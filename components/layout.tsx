@@ -4,7 +4,33 @@ import Head from "next/head";
 import Navbar from '@/components/navbar';
 import { useRouter } from "next/router";
 
+function getNames (routerPathname: string) {
+    let pageTitle;
+    let bgImageName;
 
+    if (routerPathname=="/") {
+        pageTitle = "Home";
+        bgImageName = "home";
+    } else {
+        const routerName = routerPathname.slice(1);
+        const words = routerName.split('-');
+        const capitalizedWords = words.map((word) => {
+            if (word.length > 0) {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            } else {
+                return word;
+            }
+        });
+
+        pageTitle = capitalizedWords.join(' ');
+        bgImageName = routerName;
+    }
+    
+    return {
+        pageTitle: pageTitle,
+        bgImageName: bgImageName,
+    };
+}
 
 export default function Layout ({ children }: { children: ReactNode }) {
     const router = useRouter();
@@ -16,14 +42,13 @@ export default function Layout ({ children }: { children: ReactNode }) {
 
     const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
 
-    const currentRoute = router.pathname=="/" ? "Home" : router.pathname
-    const title = `AiVolution | ${currentRoute}`;
+    const names = getNames(router.pathname);
     const description = "An AI conference near you!";
 
     return (
         <div ref={ref} className="">
             <Head>
-                <title>{title}</title>
+                <title>AiVolution | {names.pageTitle}</title>
                 <meta name="description" content={description} />
                 <style>
                     @import url(https://fonts.googleapis.com/css2?family=Outfit&family=Poppins&display=swap);
@@ -40,7 +65,7 @@ export default function Layout ({ children }: { children: ReactNode }) {
                 <motion.div
                     className="absolute inset-0 z-10"
                     style={{
-                        backgroundImage: `url(/background-images/${currentRoute}.png)`,
+                        backgroundImage: `url(/background-images/${names.bgImageName}.png)`,
                         backgroundPosition: "top",
                         backgroundSize: "cover",
                         y: backgroundY,
