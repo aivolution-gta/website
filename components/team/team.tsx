@@ -22,10 +22,6 @@ const people = [
         role: "Tech Officer",
     },
     {
-        name: "Bereket",
-        role: "Tech Officer",
-    },
-    {
         name: "Praney",
         role: "Design Officer",
     },
