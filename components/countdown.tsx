@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const COUNTDOWN_FROM = "10/13/2024";
+const COUNTDOWN_FROM = new Date();
+COUNTDOWN_FROM.setDate(COUNTDOWN_FROM.getDate() + 100);
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
@@ -25,7 +26,7 @@ const ShiftingCountdown = () => {
   }, []);
 
   const handleCountdown = () => {
-    const end = new Date(COUNTDOWN_FROM);
+    const end = COUNTDOWN_FROM;
 
     const now = new Date();
 
@@ -57,19 +58,21 @@ const ShiftingCountdown = () => {
 };
 
 const CountdownItem = ({ num, text }: { num: number; text: string }) => {
+  const updatedNum = num === 0 ? 61 : num;
+
   return (
     <div className="w-1/4 h-24 md:h-36 flex flex-col gap-1 md:gap-2 items-center justify-center border-r-[1px] border-slate-200">
       <div className="w-full text-center relative overflow-hidden">
         <AnimatePresence mode="popLayout">
           <motion.span
-            key={num}
+            key={updatedNum}
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
             transition={{ ease: "backIn", duration: 0.75 }}
             className="block text-2xl md:text-4xl lg:text-6xl xl:text-7xl text-black font-medium"
           >
-            {num}
+            {updatedNum}
           </motion.span>
         </AnimatePresence>
       </div>
