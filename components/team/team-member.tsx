@@ -9,7 +9,7 @@ export default function TeamMember ({name, role}: TeamMemberInfo) {
     return (
         <div 
             className="min-width-200 align-center m-2 p-5 rounded-lg
-            border-4 border-opacity-50 hover:border-opacity-100 hover:scale-105
+            border-4 border-opacity-50 hover:border-opacity-100 hover:scale-110
             border-dark-purple transition duration-500 ease-in-out select-none
             bg-light-purple drop-shadow-none hover:drop-shadow-lg "
         >
