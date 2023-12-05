@@ -30,7 +30,7 @@ export default function Contact() {
 
       
       <footer className="bg-gray-200 py-4 text-center">
-        <p className="text-gray-600">Contact us at "Aivolutionemailplaceholder"</p>
+        <p className="text-gray-600">Contact us at "-----"</p>
       </footer>
     </div>
   );
