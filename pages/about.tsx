@@ -3,6 +3,7 @@ import Image from "next/image"
 import Placeholder from "../public/background-images/wood-blog-placeholder.png"
 import Team from "@/components/team/team";
 
+
 export default function About () {
     return (
         <div className="w-screen">

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
+
 export default function Contact() {
   return (
     <div className="w-full flex flex-col min-h-screen">
@@ -17,6 +18,7 @@ export default function Contact() {
             <a href="https://www.instagram.com/aivolutiongta/" target="_blank">
               <p className="text-md font-bold text-dark-purple/95">
                 <FaInstagram className="inline mr-1" size={28} /> Instagram
+                
               </p>
             </a>
             <a href="mailto:AiVolutionteam@gmail.com" target="_blank">
