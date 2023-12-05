@@ -9,25 +9,20 @@ const links = [
         id: "0",
     },
     {
-        name: "about",
-        link: "/about",
-        id: "1",
-    },
-    {
         name: "contact",
         link: "/contact",
-        id: "2",
+        id: "1",
     },
     {
         name: "updates",
         link: "/updates",
-        id: "3",
+        id: "2",
     },
     {
         name: "past events",
         link: "/past-events",
-        id: "4",
-    },
+        id: "3",
+    }
 ];
 
 export default function Navbar () {
