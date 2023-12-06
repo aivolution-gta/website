@@ -20,12 +20,12 @@ const TiltCard = () => {
   const rotateX = useTransform(
     mouseYSpring,
     [-0.5, 0.5],
-    ["17.5deg", "-17.5deg"]
+    ["30deg", "-30deg"]
   );
   const rotateY = useTransform(
     mouseXSpring,
     [-0.5, 0.5],
-    ["-17.5deg", "17.5deg"]
+    ["-30deg", "30deg"]
   );
 
   const handleMouseMove = (e) => {
@@ -58,7 +58,7 @@ const TiltCard = () => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-72 rounded-xl"
+      className="relative h-96 w-96 rounded-xl"
     >
       <div
         style={{
@@ -69,7 +69,7 @@ const TiltCard = () => {
         >
         <FiMousePointer
           style={{
-            transform: "translateZ(75px)",
+            transform: "translateZ(100px)",
           }}
           className="mx-auto text-4xl text-white"
         />
