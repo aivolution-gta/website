@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
 export default function Contact() {
@@ -22,6 +22,11 @@ export default function Contact() {
             <a href="mailto:AiVolutionteam@gmail.com" target="_blank">
               <p className="text-md font-bold text-dark-purple/95">
                 <IoMdMail className="inline mr-1" size={28} /> Email
+              </p>
+            </a>
+            <a href="https://www.linkedin.com/company/aivolutiongta/mycompany/" target="_blank" rel="noopener noreferrer">
+              <p className="text-md font-bold text-dark-purple/95 ">
+                <FaLinkedin className="inline mr-1" size={28} /> Linkedin
               </p>
             </a>
           </div>
