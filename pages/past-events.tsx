@@ -1,6 +1,6 @@
 import React from "react"
 import HoverCard from "@/components/hovercard"
-import EventCarousel from "@/components/carousel"
+// import EventCarousel from "@/components/carousel"
 
 
 export default function PastEvents () {

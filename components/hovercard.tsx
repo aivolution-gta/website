@@ -28,7 +28,7 @@ const TiltCard = () => {
     ["-30deg", "30deg"]
   );
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: any) => {
     const rect = e.target.getBoundingClientRect();
 
     const width = rect.width;
