@@ -27,11 +27,11 @@ const people = [
     },
     {
         name: "Aryan",
-        role: "Technical Staff",
+        role: "Technical Lead ",
     },
     {
         name: "Rohan",
-        role: "Technical Staff",
+        role: "Technical Lead",
     },
     {
         name: "Advay",
