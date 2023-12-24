@@ -1,5 +1,5 @@
 import React from "react";
-import ShiftingCountdown from "../components/countdown";
+import ShiftingCountdown from "@/components/countdown";
 
 
 export default function Updates() {

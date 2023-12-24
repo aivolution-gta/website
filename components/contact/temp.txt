@@ -1,0 +1,96 @@
+return (
+    <div className="flex flex-col grid grid-rows-4 gap-4">
+        <div>
+            <Input 
+                type="text" 
+                variant="standard" 
+                label="Name" 
+                size="md" 
+                color="purple" 
+                value={name} 
+                onChange={(e) => {setName(e.target.value)}}
+                // error={touched.name && !name}
+                // onBlur={onBlur}
+            />
+            <Typography
+                variant="small"
+                color="red"
+                className="mt-2 flex items-center gap-1 font-normal font-['poppins']"
+            >
+                {(touched.name && !values.name) ? "This field is required." : ""}
+            </Typography>
+        </div>
+        <div>
+            <Input 
+                type="email" 
+                name="email" 
+                variant="standard" 
+                label="Email" 
+                size="md" 
+                color="purple" 
+                crossOrigin="anonymous" 
+                value={values.email} 
+                onChange={handleChange}
+                error={touched.email && !values.email}
+                onBlur={onBlur}
+            />
+            <Typography
+                variant="small"
+                color="red"
+                className="mt-2 flex items-center gap-1 font-normal font-['poppins']"
+            >
+                {(touched.email && !values.email) ? "This field is required." : ""}
+            </Typography>
+        </div>
+        <div>
+            <Input 
+                type="text" 
+                name="subject" 
+                variant="standard" 
+                label="Subject" 
+                size="md" 
+                color="purple" 
+                crossOrigin="anonymous" 
+                value={values.subject} 
+                onChange={handleChange}
+                error={touched.subject && !values.subject}
+                onBlur={onBlur}
+            />
+            <Typography
+                variant="small"
+                color="red"
+                className="mt-2 flex items-center gap-1 font-['poppins'] font-normal"
+            >
+                {(touched.subject && !values.subject) ? "This field is required." : ""}
+            </Typography>
+        </div>
+        <div>
+            <Input 
+                type="text" 
+                name="message" 
+                variant="standard" 
+                label="Message" 
+                size="lg"
+                color="purple" 
+                crossOrigin="anonymous" 
+                value={values.message} 
+                onChange={handleChange}
+                error={touched.message && !values.message}
+                onBlur={onBlur}
+            />
+            <Typography
+                variant="small"
+                color="red"
+                className="mt-2 flex items-center gap-1 font-normal font-['poppins']"
+            >
+                {(touched.message && !values.message) ? "This field is required." : ""}
+            </Typography>
+        </div>
+        <div>
+            <Button
+                disabled={!values.name || !values.email || !values.subject || !values.message}
+                onClick={onSubmit}
+            >Submit</Button>
+        </div>
+    </div>
+)

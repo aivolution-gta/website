@@ -1,12 +1,15 @@
 import React from 'react';
 import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
+import ContactForm from '@/components/contact/contact-form';
 
 
 export default function Contact() {
   return (
     <div className="w-full flex flex-col min-h-screen">
       <h1 className="flex justify-center place-center my-10 opacity-75">Contact</h1>
+
+      <ContactForm />
 
       <div className="flex items-center justify-center pr-5 pl-5 flex-grow">
         <div className="flex items-center justify-center flex-col md:w-[939px] border-2 border-dark-purple/95 rounded-lg px-10 py-8">
@@ -34,11 +37,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
-      
-      <footer className="bg-gray-200 py-4 text-center">
-        <p className="text-gray-600">Contact us at</p>
-      </footer>
     </div>
   );
 }
