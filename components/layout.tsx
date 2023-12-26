@@ -68,7 +68,7 @@ export default function Layout ({ children }: { children: ReactNode }) {
                         backgroundImage: `url(/background-images/${names.bgImageName}.png)`,
                         backgroundPosition: "top",
                         backgroundSize: "cover",
-                        y: backgroundY,
+                        // y: backgroundY,
                     }}
                 />
             </div>

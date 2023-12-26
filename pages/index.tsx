@@ -7,12 +7,12 @@ export default function Home () {
     return (
         <div className="w-full">
             {/* Section 1 */}
-            <h1 className="flex justify-center place-center my-20 opacity-100">AiVolution</h1>
+            <h1 className="flex justify-center place-center mt-20 mb-40 opacity-100">AiVolution</h1>
 
             {/* Section 2 */}
             <div className="py-20">
                 <div className="w-full">
-                    <h1 className="flex justify-center place-center my-20 opacity-75 my-0 ">About Us</h1>
+                    <h1 className="flex justify-center place-center mt-96 opacity-100">About Us</h1>
                 </div>
                 <div className="w-full">
                     <h3 className="flex text-center justify-center place-center my-20 opacity-75 text-3xl mx-36 ">
@@ -29,7 +29,7 @@ export default function Home () {
             {/* Section 3 */}
             <div className="py-20">
                 <div className="w-full">
-                    <h1 className="flex justify-center place-center my-20 opacity-75 my-0">Who Are We</h1>
+                    <h1 className="flex justify-center place-center my-20 opacity-100 my-0">Who Are We</h1>
                 </div>
                 <Team />
             </div>
