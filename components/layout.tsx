@@ -35,13 +35,6 @@ function getNames (routerPathname: string) {
 export default function Layout ({ children }: { children: ReactNode }) {
     const router = useRouter();
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "end start"],
-    });
-
-    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
-
     const names = getNames(router.pathname);
     const description = "An AI conference near you!";
 
@@ -68,7 +61,6 @@ export default function Layout ({ children }: { children: ReactNode }) {
                         backgroundImage: `url(/background-images/${names.bgImageName}.png)`,
                         backgroundPosition: "top",
                         backgroundSize: "cover",
-                        y: backgroundY,
                     }}
                 />
             </div>
