@@ -1,7 +1,3 @@
-import { Carousel } from "@material-tailwind/react";
-import Image from "next/image"
-import Placeholder from "../public/background-images/wood-blog-placeholder.png"
-import Team from "@/components/team/team";
 import { Reveal } from "@/components/reveal";
 
 export default function Home () {
@@ -17,7 +13,7 @@ export default function Home () {
             <div className="py-20">
                 <div className="w-full">
                     <Reveal>
-                    <h1 className="flex justify-center place-center mt-96 opacity-100">About Us</h1>
+                        <h1 className="flex justify-center place-center mt-96 opacity-100">About Us</h1>
                     </Reveal>
                 </div>
                 <div className="w-full">
