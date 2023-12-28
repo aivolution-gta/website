@@ -7,7 +7,7 @@ import ContactForm from '@/components/contact/contact-form';
 export default function Contact() {
     return (
         <div className="w-full flex flex-col min-h-screen">
-            <h1 className="flex justify-center place-center my-10 opacity-75">Contact</h1>
+            <h1 className="flex justify-center place-center my-2 opacity-75">Contact</h1>
 
             <ContactForm />
 
