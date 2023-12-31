@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Head from "next/head";
 import Navbar from '@/components/navbar';
 import { useRouter } from "next/router";
+import AiVolutionLogo from '../public/aivolution-logo.png';
 
 function getNames (routerPathname: string) {
     let pageTitle;
@@ -37,32 +38,32 @@ export default function Layout ({ children }: { children: ReactNode }) {
     const ref = useRef(null);
     const names = getNames(router.pathname);
     const description = "An AI conference near you!";
+    const title = `AiVolution | ${names.pageTitle}`
 
     return (
-        <div ref={ref} className="">
+        <div ref={ref} className="inset-0">
             <Head>
-                <title>AiVolution | {names.pageTitle}</title>
+                <title>{title}</title>
+                <link rel="icon" href="/favicon/favicon.ico" />
                 <meta name="description" content={description} />
                 <style>
                     @import url(https://fonts.googleapis.com/css2?family=Outfit&family=Poppins&display=swap);
                 </style>
             </Head>
 
-            <div className="w-full h-[140rem] overflow-hidden relative grid place-items-center">
-                <motion.div
+            <div className="w-full h-[140rem] overflow-hidden relative grid place-items-center" 
+                style={{
+                    backgroundImage: `url(/background-images/${names.bgImageName}.png)`,
+                    width: '100%',
+                    height: '100%',
+                }}
+            >
+                <div
                     className="relative z-20 h-full w-full"
                 >
                     <Navbar />
                     {children}
-                </motion.div>
-                <motion.div
-                    className="absolute inset-0 z-10"
-                    style={{
-                        backgroundImage: `url(/background-images/${names.bgImageName}.png)`,
-                        backgroundPosition: "top",
-                        backgroundSize: "cover",
-                    }}
-                />
+                </div>
             </div>
         </div>
         
