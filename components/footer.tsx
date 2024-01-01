@@ -19,7 +19,7 @@ export default function Footer() {
     // ]
 
     return(
-        <div className="text-white bottom-0 w-full bg-dark-purple min-h-[4em] flex justify-center">
+        <div className="mt-20 text-white bottom-0 w-full bg-dark-purple min-h-[4em] flex justify-center">
             <div className="w-full flex flex-col justify-center">
                 <div className="w-full flex justify-evenly ">
                     <div className="w-1/3"></div>

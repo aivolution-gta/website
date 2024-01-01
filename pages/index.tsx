@@ -42,37 +42,31 @@ export default function Home () {
     return (
         <div className="w-full">
             {/* Hero Section */}
-            
-                {/* <div className="w-full">
-                    <Reveal>
-                        <h1 className="flex justify-center place-center opacity-100">About Us</h1>
-                    </Reveal>
-                </div> */}
-                <div className="w-full">
-                    <Reveal>
-                    <h1 className="block text-left my-20 mx-36 text-[6em]">
-                        A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['non-profit', 'student-led'], autoStart: true, loop: true}}/></span> organization<br /> focused around informing people about our AI-driven future.
-                    </h1>
-                    </Reveal>
-                </div>
-                <div>
-                    <Reveal>
-                    <h3 className="flex text-center justify-center place-center mx-96 leading-loose">
-                        At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. We are a non-profit organization, and our mission is to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
-                    </h3>
-                    </Reveal>
-                </div>
+            <div className="w-full">
+                <Reveal>
+                <h1 className="block text-left my-20 ml-40 mr-32 text-[6em]">
+                    A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> organization<br /> focused around informing people about our AI-driven future.
+                </h1>
+                </Reveal>
+            </div>
+            <div>
+                <Reveal>
+                <h3 className="flex text-center justify-center place-center mx-80 leading-loose">
+                    At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. We are an organization whose mission is to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
+                </h3>
+                </Reveal>
+            </div>
             
 
             {/* Team */}
-            <div className="py-20">
+            <div className="mt-20">
                 <div className="w-full">
                     <Reveal>
-                    <h1 className="flex justify-center place-center opacity-100 my-0">Meet our Team</h1>
+                    <h1 className="flex justify-center place-center opacity-100 my-8">Meet our Team</h1>
                     </Reveal>
 
                     <Reveal>
-                        <div className="grid grid-cols-2 gap-4 m-10">
+                        <div className="grid grid-cols-2 gap-4 mx-10">
                             {teamData.map((data, index) => {
                                 return <Accordion key={index} title={data.role} description={data.members.join(', ')} />;
                             })}
