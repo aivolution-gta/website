@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/reveal";
 import Accordion from "@/components/accordion";
 import Typewriter from "typewriter-effect";
+import Link from "next/link";
 
 export default function Home () {
 
@@ -62,7 +63,7 @@ export default function Home () {
             <div className="mt-20">
                 <div className="w-full">
                     <Reveal>
-                    <h1 className="flex justify-center place-center opacity-100 my-8">Meet our Team</h1>
+                        <h1 className="flex justify-center place-center opacity-100 my-8">Meet Our Team</h1>
                     </Reveal>
 
                     <Reveal>
@@ -72,6 +73,13 @@ export default function Home () {
                             })}
                         </div>
                     </Reveal>
+                </div>
+            </div>
+
+            {/* Sponsor Message */}
+            <div className="flex justify-center">
+                <div className="my-20 text-center p-8 bg-dark-purple w-1/3 rounded-lg text-white">
+                    <p>Want to sponsor us? Click <Link href="/contact">here</Link>!</p>
                 </div>
             </div>
         </div>

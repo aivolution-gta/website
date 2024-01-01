@@ -8,12 +8,14 @@ export default function Contact() {
     return (
         <div className="w-full flex flex-col min-h-screen">
             <Reveal>
-                <h1 className="flex justify-center place-center my-2 opacity-75">Contact</h1>
+                <h1 className="flex justify-center place-center my-2">Contact</h1>
             </Reveal>
 
             <Reveal>
                 <div>
-                    <h3 className="text-center mb-4">If you have a request, feedback, or business inquiry, feel free to send a message <br />through the contact form, and our team will reach out to you!</h3>
+                    <div className="flex justify-center">
+                        <h3 className="text-center mb-4 w-5/12">If you have a request, feedback, or business inquiry, feel free to send a message through the contact form, and our team will reach out to you!</h3>
+                    </div>
                     <ContactForm />
                 </div>
             </Reveal>

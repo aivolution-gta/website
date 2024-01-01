@@ -9,14 +9,14 @@ const links = [
         id: "0",
     },
     {
-        name: "Contact",
-        link: "/contact",
-        id: "1",
-    },
-    {
         name: "Updates",
         link: "/updates",
         id: "2",
+    },
+    {
+        name: "Contact",
+        link: "/contact",
+        id: "1",
     },
     // {
     //     name: "past events",
