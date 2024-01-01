@@ -6,28 +6,43 @@ import pic3 from "@/public/ig/3.jpg";
 
 export function CarouselDefault() {
   return (
-    <div className="flex rounded-xl justify-center">
-      <a href={'//www.instagram.com/p/C1YFj6my8ed/'} target="_blank" rel="noopener noreferrer">
+    <div className="flex rounded-xl justify-center mediaImage">
+      <a
+        href={'https://www.instagram.com/p/C1ixhNzqa-U/'}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative overflow-hidden hover:opacity-90 transition-opacity duration-300"
+      >
+        <Image
+          src={pic3}
+          alt="image 1"
+          className="object-cover border-[2px] border-black rounded-xl mx-[40px] mediaImage transition-transform duration-300 transform hover:scale-105"
+          width={400}
+        />
+      </a>
+      <a
+        href={'//www.instagram.com/p/C1YFj6my8ed/'}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative overflow-hidden hover:opacity-90 transition-opacity duration-300"
+      >
         <Image
           src={pic1}
           alt="image 1"
-          className="object-cover border-2 border-black rounded-xl mx-[40px]"
+          className="object-cover border-[2px] border-black rounded-xl mx-[40px] mediaImage transition-transform duration-300 transform hover:scale-105"
           width={400}
         />
       </a>
-      <a href={'https://www.instagram.com/p/C1SZuIyyMUe/'} target="_blank" rel="noopener noreferrer">
+      <a
+        href={'https://www.instagram.com/p/C1SZuIyyMUe/'}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative overflow-hidden hover:opacity-90 transition-opacity duration-300"
+      >
         <Image
           src={pic2}
           alt="image 2"
-          className="object-cover border-2 border-black rounded-xl mx-[40px]"
-          width={400}
-        />
-      </a>
-      <a href={'https://www.instagram.com/p/C00TaHNtj43/'} target="_blank" rel="noopener noreferrer">
-        <Image
-          src={pic3}
-          alt="image 3"
-          className="object-cover border-2 border-black rounded-xl mx-[40px]"
+          className="object-cover border-[2px] border-black rounded-xl mx-[40px] mediaImage transition-transform duration-300 transform hover:scale-105"
           width={400}
         />
       </a>
