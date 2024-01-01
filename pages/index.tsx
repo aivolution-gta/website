@@ -2,41 +2,42 @@ import { Reveal } from "@/components/reveal";
 import Accordion from "@/components/accordion";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
+import MuiModal from "@/components/modal";
 
 export default function Home () {
 
     const teamData = [
         {
             role: "Presidents",
-            members: ["Ashwath", "Devang"]
+            members: [{name: "Ashwath", bio: ""}, {name: "Devang", bio: ""}]
         },
         {
             role: "Vice-Presidents",
-            members: ["Nirupa", "Taha"]
+            members: [{name: "Nirupa", bio: ""}, {name: "Taha", bio: ""}]
         },
         {
             role: "Secretaries",
-            members: ["Arush", "Sohun"]
+            members: [{name: "Arush", bio: ""}, {name: "Sohun", bio: ""}]
         },
         {
             role: "Developers",
-            members: ["Sohum", "Advay", "Aryan", "Rohan"]
+            members: [{name: "Sohum", bio: ""}, {name: "Advay", bio: ""}, {name: "Aryan", bio: ""}, {name: "Rohan", bio: ""}]
         },
         {
             role: "Design",
-            members: ["Praney", "Mujtaba", "Salma", "Sonali"]
+            members: [{name: "Praney", bio: ""}, {name: "Mujtaba", bio: ""}, {name: "Salma", bio: ""}, {name: "Sonali", bio: ""}]
         },
         {
             role: "Marketing Members",
-            members: ["Akshitha", "Adam", "Arjun", "Jerry"]
+            members: [{name: "Akshitha", bio: ""}, {name: "Adam", bio: ""}, {name: "Arjun", bio: ""}, {name: "Jerry", bio: ""}]
         },
         {
             role: "Outreach Members",
-            members: ["Mahad", "Chris", "Mustafa", "Ryan"]
+            members: [{name: "Mahad", bio: ""}, {name: "Chris", bio: ""}, {name: "Mustafa", bio: ""}, {name: "Ryan", bio: ""}]
         },
         {
             role: "Finance Members",
-            members: ["Anuhya"]
+            members: [{name: "Anuhya", bio: ""}]
         },
     ]
 
@@ -46,7 +47,7 @@ export default function Home () {
             <div className="w-full">
                 <Reveal>
                 <h1 className="block text-left my-20 ml-40 mr-32 text-[6em]">
-                    A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> organization<br /> focused around informing people about our AI-driven future.
+                    A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true,}}/></span> organization<br /> focused around informing people about our AI-driven future.
                 </h1>
                 </Reveal>
             </div>
@@ -69,7 +70,7 @@ export default function Home () {
                     <Reveal>
                         <div className="grid grid-cols-2 gap-4 mx-10">
                             {teamData.map((data, index) => {
-                                return <Accordion key={index} title={data.role} description={(<div className={`grid grid-cols-2 text-center gap-4`}>{data.members.map((name, i) => (<div className="col-span-1 border-2 border-dark-purple rounded-md py-4 select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105" key={i}>{name}</div>))}</div>)} />;
+                                return <Accordion key={index} title={data.role} description={(<div className={`grid grid-cols-2 text-center gap-4`}>{data.members.map((person, i) => (<div className="col-span-1 border-2 border-dark-purple rounded-md py-4 select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105" key={i}><MuiModal name={person.name} bio={person.bio}/></div>))}</div>)} />;
                             })}
                         </div>
                     </Reveal>
