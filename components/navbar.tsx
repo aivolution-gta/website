@@ -4,30 +4,30 @@ import Image from "next/image";
 
 const links = [
     {
-        name: "home",
+        name: "Home",
         link: "/",
         id: "0",
     },
     {
-        name: "contact",
+        name: "Contact",
         link: "/contact",
         id: "1",
     },
     {
-        name: "updates",
+        name: "Updates",
         link: "/updates",
         id: "2",
     },
-    {
-        name: "past events",
-        link: "/past-events",
-        id: "3",
-    }
+    // {
+    //     name: "past events",
+    //     link: "/past-events",
+    //     id: "3",
+    // }
 ];
 
 export default function Navbar () {
     return (
-        <div className="font-bold flex justify-between z-20 w-full bg-dark-purple/95">
+        <div className="font-bold flex justify-between z-20 w-full bg-dark-purple">
             <div className="m-2">
                 <Link href="/">
                     <Image

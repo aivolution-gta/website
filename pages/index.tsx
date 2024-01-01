@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/reveal";
 import Accordion from "@/components/accordion";
+import Typewriter from "typewriter-effect";
 
 export default function Home () {
 
@@ -41,33 +42,26 @@ export default function Home () {
     return (
         <div className="w-full">
             {/* Hero Section */}
-            <Reveal>
-                <h1 className="flex justify-center place-center my-20 opacity-100">AiVolution</h1>
-            </Reveal>
-
-            {/* About */}
             
-            <div className="py-20 mt-[30em]">
-                <div className="w-full">
+                {/* <div className="w-full">
                     <Reveal>
                         <h1 className="flex justify-center place-center opacity-100">About Us</h1>
                     </Reveal>
-                </div>
+                </div> */}
                 <div className="w-full">
                     <Reveal>
-                    <h3 className="flex text-center justify-center place-center my-20 opacity-75 text-3xl mx-36 ">
-                        A non-profit organization focused around informing people about our AI driven future.
-                    </h3>
+                    <h1 className="block text-left my-20 mx-36 text-[6em]">
+                        A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['non-profit', 'student-led'], autoStart: true, loop: true}}/></span> organization<br /> focused around informing people about our AI-driven future.
+                    </h1>
                     </Reveal>
                 </div>
                 <div>
                     <Reveal>
-                    <p className="flex text-center justify-center place-center opacity-75 mx-96">
-                        At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. We are a non-profit organization, and our mission is clear: to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
-                    </p>
+                    <h3 className="flex text-center justify-center place-center mx-96 leading-loose">
+                        At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. We are a non-profit organization, and our mission is to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
+                    </h3>
                     </Reveal>
                 </div>
-            </div>
             
 
             {/* Team */}

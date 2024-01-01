@@ -48,16 +48,16 @@ const ShiftingCountdown = () => {
   return (
     <div className="p-4 bg-gradient-to-br from-violet-600 to-indigo-600">
       <div className="flex justify-center place-center">
-        <CountdownItem num={remaining.days} text="days" />
-        <CountdownItem num={remaining.hours} text="hours" />
-        <CountdownItem num={remaining.minutes} text="minutes" />
-        <CountdownItem num={remaining.seconds} text="seconds" />
+        <CountdownItem num={"??"} text="days" />
+        <CountdownItem num={"??"} text="hours" />
+        <CountdownItem num={"??"} text="minutes" />
+        <CountdownItem num={"??"} text="seconds" />
       </div>
     </div>
   );
 };
 
-const CountdownItem = ({ num, text }: { num: number; text: string }) => {
+const CountdownItem = ({ num, text }: { num: any; text: string }) => {
   const updatedNum = num === 0 ? 61 : num;
 
   return (

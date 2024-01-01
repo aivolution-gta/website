@@ -1,24 +1,30 @@
-import React from 'react';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
-import ContactForm from '@/components/contact/contact-form';
 
+export default function Footer() {
 
-export default function Contact() {
-    return (
-        <div className="w-full flex flex-col min-h-screen">
-            <h1 className="flex justify-center place-center my-2 opacity-75">Contact</h1>
-            <h3 className="text-center mb-4">If you have a request, feedback, or business inquiry, feel free to send a message <br />through the contact form, and our team will reach out to you!</h3>
+    // const socials = [
+    //     {
+    //         link: '',
+    //         icon:
+    //     },
+    //     {
+    //         link:,
+    //         icon:
+    //     },
+    //     {
+    //         link:,
+    //         icon:
+    //     }
+    // ]
 
-            <ContactForm />
-
-            <div className="flex items-center justify-center pr-5 pl-5 flex-grow">
-                <div className="flex items-center justify-center flex-col md:w-[939px] px-10 py-8">
-                    <h2 className="font-bold text-gray-950 text-lg mb-3">
-                        Other ways you can contact us:
-                    </h2>
-
-                    <div className="flex flex-wrap gap-4 mb-3 items-center justify-center border-dark-purple border-2 rounded-lg bg-dark-purple px-16 py-4">
+    return(
+        <div className="text-white bottom-0 w-full bg-dark-purple min-h-[4em] flex justify-center">
+            <div className="w-full flex flex-col justify-center">
+                <div className="w-full flex justify-evenly ">
+                    <div className="w-1/3"></div>
+                    <div>Made with ❤️ by the <a href="https://github.com/padhyeSohum/aivolution-website" target="_blank" className="">AiVolution Dev Team</a></div>
+                    <div className="flex justify-end w-1/3">
                         <a href="mailto:AiVolutionteam@gmail.com" target="_blank">
                             <p className="text-md font-bold">
                                 <IoMdMail className="inline mr-1" size={28} />
@@ -37,11 +43,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+                
         </div>
-    );
+    )
 }
-
-
-      
-      
-   

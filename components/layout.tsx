@@ -1,9 +1,11 @@
 import { ReactNode, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+// import { motion, useScroll, useTransform } from "framer-motion";
 import Head from "next/head";
-import Navbar from '@/components/navbar';
 import { useRouter } from "next/router";
-import AiVolutionLogo from '../public/aivolution-logo.png';
+// import AiVolutionLogo from '../public/aivolution-logo.png';
+
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 function getNames (routerPathname: string) {
     let pageTitle;
@@ -41,7 +43,7 @@ export default function Layout ({ children }: { children: ReactNode }) {
     const title = `AiVolution | ${names.pageTitle}`
 
     return (
-        <div ref={ref} className="inset-0">
+        <div /*ref={ref}*/ className="">
             <Head>
                 <title>{title}</title>
                 <link rel="icon" href="/favicon/favicon.ico" />
@@ -51,18 +53,19 @@ export default function Layout ({ children }: { children: ReactNode }) {
                 </style>
             </Head>
 
-            <div className="w-full h-[140rem] overflow-hidden relative grid place-items-center" 
-                style={{
-                    backgroundImage: `url(/background-images/${names.bgImageName}.png)`,
-                    width: '100%',
-                    height: '100%',
-                }}
+            <div className="w-full overflow-hidden relative grid place-items-center" 
+                // style={{
+                //     backgroundImage: `url(/background-images/${names.bgImageName}.png)`,
+                //     width: '100%',
+                //     height: '100%',
+                // }}
             >
                 <div
                     className="relative z-20 h-full w-full"
                 >
                     <Navbar />
                     {children}
+                    <Footer />
                 </div>
             </div>
         </div>

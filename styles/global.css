@@ -8,6 +8,15 @@
     scroll-behavior: smooth;
 }
 
+html {
+    background-image: linear-gradient(#FFECBC, #6A60A4);
+    background-repeat: no-repeat;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
 ::selection {
     background: #554C89;
     color: white;
@@ -30,4 +39,14 @@ h3 {
 
 .ReactCollapse--collapse {
     transition: all 500ms;
+}
+
+a {
+    color: #6A60A4;
+    transition: all linear;
+    transition-duration: 500ms;
+}
+
+a:hover {
+    color: #FFECBC;
 }
