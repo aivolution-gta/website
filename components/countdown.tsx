@@ -61,7 +61,7 @@ const CountdownItem = ({ num, text }: { num: any; text: string }) => {
   const updatedNum = num === 0 ? 61 : num;
 
   return (
-    <div className="w-1/4 h-24 md:h-36 flex flex-col gap-1 md:gap-2 items-center justify-center border-r-[1px] border-slate-200">
+    <div className="w-1/4 h-24 md:h-36 flex flex-col gap-1 md:gap-2 items-center justify-center ">
       <div className="w-full text-center relative overflow-hidden">
         <AnimatePresence mode="popLayout">
           <motion.span

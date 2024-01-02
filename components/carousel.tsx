@@ -11,39 +11,36 @@ export function CarouselDefault() {
         href={'https://www.instagram.com/p/C1ixhNzqa-U/'}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative overflow-hidden hover:opacity-90 transition-opacity duration-300 mb-4 sm:mb-0"
+        className="group relative overflow-hidden mb-4 sm:mb-0 hover:scale-105 transition-transform duration-300 hover:opacity-90"
       >
         <Image
           src={pic3}
           alt="image 1"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px] transition-transform duration-300 transform hover:scale-105"
-          
+          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px]"
         />
       </a>
       <a
         href={'//www.instagram.com/p/C1YFj6my8ed/'}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative overflow-hidden hover:opacity-90 transition-opacity duration-300 mb-4 sm:mb-0"
+        className="group relative overflow-hidden mb-4 sm:mb-0 hover:scale-105 transition-transform duration-300 hover:opacity-90"
       >
         <Image
           src={pic1}
           alt="image 1"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px] transition-transform duration-300 transform hover:scale-105"
-          
+          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px]"
         />
       </a>
       <a
         href={'https://www.instagram.com/p/C1SZuIyyMUe/'}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative overflow-hidden hover:opacity-90 transition-opacity duration-300 mb-4 sm:mb-0"
+        className="group relative overflow-hidden mb-4 sm:mb-0 hover:scale-105 transition-transform duration-300 hover:opacity-90"
       >
         <Image
           src={pic2}
           alt="image 2"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px] transition-transform duration-300 transform hover:scale-105"
-          
+          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px]"
         />
       </a>
     </div>
