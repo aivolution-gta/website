@@ -9,6 +9,7 @@ const ContactForm: React.FC = () => {
     const [company, setCompany] = useState('');
     const [isMessageSent, setMessageSent] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const [emailError, setEmailError] = useState('');
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
@@ -17,6 +18,14 @@ const ContactForm: React.FC = () => {
         if (!name || !email || !subject || !message) {
             setErrorMessage('Please fill in all required fields.');
             return;
+        }
+
+        // Validate email
+        if (!validateEmail(email)) {
+            setEmailError('Invalid email address.');
+            return;
+        } else {
+            setEmailError('');
         }
 
         // Send email using Nodemailer
@@ -31,7 +40,6 @@ const ContactForm: React.FC = () => {
         if (response.ok) {
             console.log(`SUCCESS.\nNAME: ${name}\nEMAIL: ${email}\nSUBJECT: ${subject}\nMESSAGE: ${message}\nPHONE: ${phone}\nCOMPANY: ${company}`);
             setMessageSent(true);
-
             // Clear user inputs
             setName('');
             setEmail('');
@@ -43,6 +51,12 @@ const ContactForm: React.FC = () => {
             console.log('ERROR OCCURRED');
             setErrorMessage('Error sending message. Please try again.');
         }
+    }
+
+    const validateEmail = (email: string) => {
+        // Use a regex to validate the email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 
     const closeMessage = () => {
@@ -67,6 +81,11 @@ const ContactForm: React.FC = () => {
                     <h2 className="font-bold text-[#1B1541] text-[1.5em] ">
                         Email:
                     </h2>
+                    {emailError && (
+                    <div className="text-red-500 mt-2">
+                        {emailError}
+                    </div>
+                )}
                     <input
                         className="outline-0 mb-[10px] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                         type="email"
@@ -93,13 +112,13 @@ const ContactForm: React.FC = () => {
                         onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
 
-                    <button
-                        onClick={handleSubmit}
-                        className="mt-[10px] h-[60px] w-[855px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 text-xl hover:bg-dark-purple hover:text-white transition-all ease-in-out duration-500"
-                        type="submit"
-                    >
-                        Send
-                    </button>
+                <button
+                    onClick={handleSubmit}
+                    className="mt-[10px] h-[60px] w-[855px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 text-xl hover:bg-dark-purple hover:text-white transition-all ease-in-out duration-500"
+                    type="submit"
+                >
+                    Send
+                </button>
                 </div>
             </form>
 
