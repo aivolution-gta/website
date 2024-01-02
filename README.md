@@ -2,11 +2,11 @@
 
 # AiVolution
 
-A student-led organization focused on informing people about our AI-driven future.
+A student-led organization focused on informing people about our technology future.
 
 ## About Us
 
-At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. Our mission is to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
+At AiVolution, we are passionate about the infinite possibilities of technology and are dedicated to fostering a community that shares this enthusiasm. Our mission is to be at the forefront of the ever-evolving world of technology by bringing people together through exceptional events and conferences.
 
 ## Vision
 
@@ -14,11 +14,11 @@ Our vision is to create a platform where individuals can explore, learn, and dis
 
 ## What We Do
 
-- **Events and Conferences:** We organize and host events and conferences to facilitate discussions on the latest trends, breakthroughs, and ethical considerations in AI and technology.
+- **Events and Conferences:** We organize and host events and conferences to facilitate discussions on the latest trends, breakthroughs, and ethical considerations in new technology.
 
-- **Community Building:** We strive to build a strong and inclusive community of individuals who are curious about AI and its applications. Through networking opportunities and collaborative projects, we aim to connect like-minded individuals.
+- **Community Building:** We strive to build a strong and inclusive community of curious individuals about tech and its applications. Through networking opportunities and collaborative projects, we aim to connect like-minded individuals.
 
-- **Education and Awareness:** We are committed to educating the public about AI, its potential benefits, and the ethical considerations surrounding its implementation. Our goal is to demystify AI and make information accessible to everyone.
+- **Education and Awareness:** We are committed to educating the public about new technologies, their potential benefits, and the ethical considerations surrounding their implementation. Our goal is to demystify emerging technologies and make information accessible to everyone.
 
 ## Follow Us
 
@@ -33,6 +33,6 @@ Stay connected and follow us on social media for the latest updates and announce
 - **Email:** [aivolutionteam@gmail.com](mailto:aivolutionteam@gmail.com)
 - **Website:** [https://aivolution.vercel.app/](https://aivolution.vercel.app/)
 
-We look forward to exploring the future of AI together!
+We look forward to exploring the future of technology together!
 
 ---
