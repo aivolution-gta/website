@@ -12,7 +12,7 @@ export default function Accordion({title, description}: AccordionProps) {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="text-white">
+        <div className="text-white my-4">
             <div className={`border-dark-purple border-2 bg-mid-purple py-[25px] px-[50px] flex justify-between items-center cursor-pointer`}
                 onClick={() => {setOpen(!open)}}
             >
