@@ -5,10 +5,19 @@ const ContactForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [phone, setPhone] = useState('');
+    const [company, setCompany] = useState('');
     const [isMessageSent, setMessageSent] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
+
+        // Validate inputs
+        if (!name || !email || !subject || !message) {
+            setErrorMessage('Please fill in all required fields.');
+            return;
+        }
 
         // Send email using Nodemailer
         const response = await fetch('/api/send-email', {
@@ -16,19 +25,29 @@ const ContactForm: React.FC = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, subject, message }),
+            body: JSON.stringify({ name, email, subject, message, phone, company }),
         });
 
         if (response.ok) {
-            console.log(`SUCCESS.\nNAME: ${name}\nEMAIL: ${email}\nSUBJECT: ${subject}\nMESSAGE: ${message}`);
+            console.log(`SUCCESS.\nNAME: ${name}\nEMAIL: ${email}\nSUBJECT: ${subject}\nMESSAGE: ${message}\nPHONE: ${phone}\nCOMPANY: ${company}`);
             setMessageSent(true);
+
+            // Clear user inputs
+            setName('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+            setPhone('');
+            setCompany('');
         } else {
             console.log('ERROR OCCURRED');
+            setErrorMessage('Error sending message. Please try again.');
         }
     }
 
     const closeMessage = () => {
         setMessageSent(false);
+        setErrorMessage('');
     }
 
     return (
@@ -91,6 +110,20 @@ const ContactForm: React.FC = () => {
                         <button
                             className="absolute top-2 right-2 cursor-pointer h-[25px]"
                             onClick={closeMessage}
+                        >
+                            X
+                        </button>
+                    </div>
+                </div>
+            )}
+
+            {errorMessage && (
+                <div className="fixed bottom-0 left-0 m-4 h-[60px] w-[1255px]">
+                    <div className="text-center p-5 bg-dark-purple w-1/3 rounded-lg text-white relative">
+                        <p>{errorMessage}</p>
+                        <button
+                            className="absolute top-2 right-2 cursor-pointer h-[25px]"
+                            onClick={() => setErrorMessage('')}
                         >
                             X
                         </button>
