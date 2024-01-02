@@ -16,8 +16,8 @@ export function CarouselDefault() {
         <Image
           src={pic3}
           alt="image 1"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage transition-transform duration-300 transform hover:scale-105"
-          width={400}
+          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px] transition-transform duration-300 transform hover:scale-105"
+          
         />
       </a>
       <a
@@ -29,8 +29,8 @@ export function CarouselDefault() {
         <Image
           src={pic1}
           alt="image 1"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage transition-transform duration-300 transform hover:scale-105"
-          width={400}
+          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px] transition-transform duration-300 transform hover:scale-105"
+          
         />
       </a>
       <a
@@ -42,8 +42,8 @@ export function CarouselDefault() {
         <Image
           src={pic2}
           alt="image 2"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage transition-transform duration-300 transform hover:scale-105"
-          width={400}
+          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px] transition-transform duration-300 transform hover:scale-105"
+          
         />
       </a>
     </div>

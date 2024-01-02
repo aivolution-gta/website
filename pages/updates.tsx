@@ -19,11 +19,11 @@ export default function Updates() {
             </Reveal>
             
             <Reveal>
-                <h3 className="mb-8 text-lg md:text-xl lg:text-2xl">Follow our Instagram page to get notified on when the next event will be!</h3>
+                <h3 className="mb-8 text-lg md:text-xl lg:text-2xl mx-10">Follow our Instagram page to get notified on when the next event will be!</h3>
             </Reveal>
 
             <Reveal>
-                <h2 className="flex justify-center place-center mt-8 mb-4 text-2xl md:text-3xl lg:text-4xl">Latest Instagram Posts!</h2>
+                <h2 className="flex justify-center place-center my-8 text-2xl md:text-3xl lg:text-4xl">Latest Instagram Posts!</h2>
             </Reveal>
 
             <Reveal>
