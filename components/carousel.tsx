@@ -5,46 +5,44 @@ import pic2 from "@/public/ig/2.jpg";
 import pic3 from "@/public/ig/3.jpg";
 
 export function CarouselDefault() {
-  return (
-    <div className="flex flex-col sm:flex-row rounded-xl justify-center mediaImage">
-      <a
-        href={'https://www.instagram.com/p/C1ixhNzqa-U/'}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative overflow-hidden mb-4 sm:mb-0 hover:scale-105 transition-transform duration-300 hover:opacity-90"
-      >
-        <Image
-          src={pic3}
-          alt="image 1"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px]"
-        />
-      </a>
-      <a
-        href={'//www.instagram.com/p/C1YFj6my8ed/'}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative overflow-hidden mb-4 sm:mb-0 hover:scale-105 transition-transform duration-300 hover:opacity-90"
-      >
-        <Image
-          src={pic1}
-          alt="image 1"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px]"
-        />
-      </a>
-      <a
-        href={'https://www.instagram.com/p/C1SZuIyyMUe/'}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative overflow-hidden mb-4 sm:mb-0 hover:scale-105 transition-transform duration-300 hover:opacity-90"
-      >
-        <Image
-          src={pic2}
-          alt="image 2"
-          className="object-cover border-[2px] border-black rounded-xl mx-auto sm:mx-[20px] mediaImage xs:w-[300px]"
-        />
-      </a>
-    </div>
-  );
+
+    const images = [
+        {
+            src: pic3,
+            num: "3",
+            link: "https://www.instagram.com/p/C1ixhNzqa-U/"
+        },
+        {
+            src: pic2,
+            num: "2",
+            link: "https://www.instagram.com/p/C1YFj6my8ed/"
+        },
+        {
+            src: pic1,
+            num: "1",
+            link: "https://www.instagram.com/p/C1SZuIyyMUe/"
+        }
+    ]
+
+    return (
+        <div className="flex flex-row xs:flex-col justify-evenly">
+            {images.map((data, i) => 
+                <a
+                    href={data.link}
+                    target="_blank"
+                    key={i}
+                    rel="noopener noreferrer"
+                    className="group relative overflow-hidden mb-4 sm:mb-0 hover:scale-105 transition-transform duration-300 hover:opacity-90 mx-auto sm:mx-[20px]"
+                >
+                    <Image
+                        src={data.src}
+                        alt={`image ${data.num}`}
+                        className="object-cover border-[2px] border-black rounded-xl w-[600px] xs:w-[300px]"
+                    />
+                </a>
+            )}
+        </div>
+    );
 }
 
 export default CarouselDefault;

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "../public/aivolution-logo.png";
+import Banner from "../public/aivolution-banner.png";
 import Image from "next/image";
 import { IoIosMenu } from "react-icons/io";
 import { useState } from "react";
@@ -35,7 +36,7 @@ export default function Navbar () {
             <div className="m-2">
                 <Link href="/">
                     <Image
-                        src={Logo}
+                        src={Banner}
                         alt="logo"
                         height={60}
                         className="rounded-full"
