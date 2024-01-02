@@ -41,7 +41,7 @@ export default function Home () {
     ]
 
     return (
-        <div className="w-full">
+        <div className="w-screen">
             {/* Hero Section */}
             <div className="w-full">
                 <Reveal>

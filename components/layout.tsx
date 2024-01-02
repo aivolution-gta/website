@@ -61,7 +61,7 @@ export default function Layout ({ children }: { children: ReactNode }) {
                 // }}
             >
                 <div
-                    className="relative z-20 h-full w-full"
+                    className="relative h-full w-full"
                 >
                     <Navbar />
                     {children}

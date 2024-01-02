@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Logo from "../public/aivolution-logo.png";
 import Image from "next/image";
+import { IoIosMenu } from "react-icons/io";
+import { useState } from "react";
 
 const links = [
     {
@@ -26,8 +28,10 @@ const links = [
 ];
 
 export default function Navbar () {
+    const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
+
     return (
-        <div className="font-bold flex justify-between z-20 w-full bg-dark-purple">
+        <div className="font-bold flex justify-between w-screen bg-dark-purple xs:py-4">
             <div className="m-2">
                 <Link href="/">
                     <Image
@@ -39,7 +43,7 @@ export default function Navbar () {
                 </Link>
                 
             </div>
-            <div className="my-auto">
+            <div className="my-auto xs:hidden">
                 {links.map(({ name, link, id }) => 
                     <Link
                         key={id}
@@ -51,6 +55,21 @@ export default function Navbar () {
                 )}
             </div>
             
+            <div className="my-auto mx-2 hidden xs:block text-beige rounded-xl">
+                <IoIosMenu className="inline m-2" size={40} onClick={() => {setDropdownIsOpen(!dropdownIsOpen)}}/>
+
+                {dropdownIsOpen &&
+                    <div className="flex flex-col absolute top-[5.5rem] right-[0.5rem] w-[120px] rounded-lg bg-white border-light-purple text-right"
+                    >
+                        <ul className="flex flex-col">
+                            {links.map(({name, link, id}) => 
+                                <li key={id} className="hover:bg-[#AAAAAA] py-4 pr-6"><Link href={link}>{name}</Link></li>
+                            )}
+                        </ul>
+                    </div>
+                }
+                
+            </div>
         </div>
     );
 }
