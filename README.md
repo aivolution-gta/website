@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![aivolution-banner (1)](https://github.com/aivolution-gta/website/assets/134825013/841301eb-d180-4973-a4bf-b16e20d5f96a)
 
-## Getting Started
+# AiVolution
 
-First, run the development server:
+A student-led organization focused on informing people about our AI-driven future.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About Us
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. Our mission is to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Vision
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Our vision is to create a platform where individuals can explore, learn, and discuss the advancements in artificial intelligence and its impact on our future. We believe in the power of knowledge and community to drive positive change in the world.
 
-## Learn More
+## What We Do
 
-To learn more about Next.js, take a look at the following resources:
+- **Events and Conferences:** We organize and host events and conferences to facilitate discussions on the latest trends, breakthroughs, and ethical considerations in AI and technology.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Community Building:** We strive to build a strong and inclusive community of individuals who are curious about AI and its applications. Through networking opportunities and collaborative projects, we aim to connect like-minded individuals.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Education and Awareness:** We are committed to educating the public about AI, its potential benefits, and the ethical considerations surrounding its implementation. Our goal is to demystify AI and make information accessible to everyone.
 
-## Deploy on Vercel
+## Follow Us
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Stay connected and follow us on social media for the latest updates and announcements:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [LinkedIn](https://www.linkedin.com/company/aivolutiongta) 
+- [Instagram](https://www.instagram.com/aivolutiongta) 
+- [TikTok](https://www.tiktok.com/@aivolutiongta) 
+
+## Contact Us
+
+- **Email:** [aivolutionteam@gmail.com](mailto:aivolutionteam@gmail.com)
+- **Website:** [https://aivolution.vercel.app/](https://aivolution.vercel.app/)
+
+We look forward to exploring the future of AI together!
+
+---

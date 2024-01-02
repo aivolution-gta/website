@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal";
 
 export default function Contact() {
     return (
-        <div className="w-full flex flex-col min-h-screen">
+        <div className="w-screen flex flex-col min-h-screen">
             <Reveal>
                 <h1 className="flex justify-center place-center my-2">Contact</h1>
             </Reveal>
