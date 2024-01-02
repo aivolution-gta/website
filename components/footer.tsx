@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
 export default function Footer() {
@@ -27,17 +27,22 @@ export default function Footer() {
                     <div className="flex justify-end w-1/3">
                         <a href="mailto:AiVolutionteam@gmail.com" target="_blank">
                             <p className="text-md font-bold">
-                                <IoMdMail className="inline mr-1" size={28} />
+                                <IoMdMail className="inline mx-1" size={28} />
                             </p>
                         </a>
                         <a href="https://www.instagram.com/aivolutiongta/" target="_blank">
                             <p className="text-md font-bold">
-                                <FaInstagram className="inline mr-1" size={28} />
+                                <FaInstagram className="inline mx-1" size={28} />
                             </p>
                         </a>
                         <a href="https://www.linkedin.com/company/aivolutiongta/mycompany/" target="_blank" rel="noopener noreferrer">
                             <p className="text-md font-bold">
-                                <FaLinkedin className="inline mr-1" size={28} />
+                                <FaLinkedin className="inline mx-1" size={28} />
+                            </p>
+                        </a>
+                        <a href="https://www.tiktok.com/@aivolutiongta" target="_blank" rel="noopener noreferrer">
+                            <p className="text-md font-bold">
+                                <FaTiktok className="inline mx-1" size={28} />
                             </p>
                         </a>
                     </div>

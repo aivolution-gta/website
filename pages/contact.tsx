@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 import ContactForm from '@/components/contact/contact-form';
 import { Reveal } from "@/components/reveal";
@@ -32,17 +32,22 @@ export default function Contact() {
                         <div className="flex flex-wrap gap-4 mb-3 items-center justify-center border-dark-purple border-2 rounded-lg bg-dark-purple px-16 py-4">
                             <a href="mailto:AiVolutionteam@gmail.com" target="_blank">
                                 <p className="text-md font-bold">
-                                    <IoMdMail className="inline mr-1" size={28} />
+                                    <IoMdMail className="inline" size={28} />
                                 </p>
                             </a>
                             <a href="https://www.instagram.com/aivolutiongta/" target="_blank">
                                 <p className="text-md font-bold">
-                                    <FaInstagram className="inline mr-1" size={28} />
+                                    <FaInstagram className="inline" size={28} />
                                 </p>
                             </a>
                             <a href="https://www.linkedin.com/company/aivolutiongta/mycompany/" target="_blank" rel="noopener noreferrer">
                                 <p className="text-md font-bold">
-                                    <FaLinkedin className="inline mr-1" size={28} />
+                                    <FaLinkedin className="inline" size={28} />
+                                </p>
+                            </a>
+                            <a href="https://www.tiktok.com/@aivolutiongta" target="_blank" rel="noopener noreferrer">
+                                <p className="text-md font-bold">
+                                    <FaTiktok className="inline" size={28} />
                                 </p>
                             </a>
                         </div>
