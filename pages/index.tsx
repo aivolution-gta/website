@@ -51,7 +51,7 @@ export default function Home () {
                         xs:my-10 xs:mx-10 xs:text-[2.5em] xs:mb-44
                     "
                 >
-                    A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br className="hidden xs:block" />organization focused around informing people about our AI-driven future.
+                    A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br className="hidden xs:block" />organization focused around informing people about our technology driven future.
                 </h1>
                 </Reveal>
             </div>
