@@ -19,12 +19,12 @@ export default function Footer() {
     // ]
 
     return(
-        <div className="mt-20 text-white bottom-0 w-screen bg-dark-purple min-h-[4em] flex justify-center xs:py-6">
+        <div className="mt-20 xs:mt-0 text-white bottom-0 w-screen bg-dark-purple min-h-[4em] flex justify-center xs:py-6">
             <div className="w-full flex flex-col justify-center">
                 <div className="w-full flex xs:flex-col justify-evenly text-center">
                     <div className="w-1/3 xs:hidden"></div>
-                    <p>Made with ❤️ by the <br className="hidden xs:block"/><a href="https://github.com/padhyeSohum/aivolution-website" target="_blank" className="">AiVolution Dev Team</a></p>
-                    <div className="flex justify-end w-1/3 xs:w-full xs:justify-center xs:mt-4">
+                        <p>Made with ❤️ by the <br className="hidden "/><a href="https://github.com/padhyeSohum/aivolution-website" target="_blank" className="">AiVolution Dev Team</a></p>
+                    <div className="flex justify-end w-1/3 xs:hidden xs:mt-4">
                         <a href="mailto:AiVolutionteam@gmail.com" target="_blank">
                             <p className="text-md font-bold">
                                 <IoMdMail className="inline mx-1" size={28} />
