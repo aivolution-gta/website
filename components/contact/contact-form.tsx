@@ -67,18 +67,18 @@ const ContactForm: React.FC = () => {
     }
 
     return (
-        <div className="w-full ">
+        <div className="w-full">
             <form className="flex items-center justify-center">
-                <div className="flex-col border-2 border-dark-purple/95 rounded-lg w-full mx-4">
+                <div className="flex-col border-2 border-dark-purple rounded-lg w-2/3 xs:w-5/6 sm:w-5/6">
 
                     <div className="flex justify-center">
                         <div className="flex flex-col w-5/6 mt-4">
-                            <h3 className="font-bold w-full text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px]">
+                            <h3 className="font-bold w-full text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px] mb-2">
                                 Name:
                             </h3>
 
                             <input
-                                className="outline-0 mb-[10px] h-[50px] xs:h-[35px] xs:text-[0.85em] xs:mr-[15px] w-full bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
+                                className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                                 type="text"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
@@ -88,18 +88,18 @@ const ContactForm: React.FC = () => {
 
                     <div className="flex justify-center">
                         <div className="flex flex-col w-5/6 mt-4">
-                            <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px]">
+                            <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px] mb-2">
                                 Email:
                             </h2>
 
                             {emailError && (
-                            <div className="text-red-500 mt-2">
+                            <div className="text[#FF0000] mt-2">
                                 {emailError}
                             </div>
                             )}
                             
                             <input
-                                className="outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
+                                className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -109,7 +109,7 @@ const ContactForm: React.FC = () => {
                     
                     <div className="flex justify-center">
                         <div className="flex flex-col w-5/6 mt-4">
-                            <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px]">
+                            <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px] mb-2">
                                 Subject:
                             </h2>
 
@@ -124,7 +124,7 @@ const ContactForm: React.FC = () => {
 
                     <div className="flex justify-center">
                         <div className="flex flex-col w-5/6 mt-4">
-                            <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px]">
+                            <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px] mb-2">
                                 Message:
                             </h2>
 

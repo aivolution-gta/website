@@ -7,11 +7,11 @@ export default function Updates() {
     return (
         <div className="w-full text-center">
             <Reveal>
-                <h1 className="flex justify-center place-center my-5">Updates</h1>
+                <h1 className="flex justify-center place-center my-5 xs:text-[3em] sm:text-[3em]">Updates</h1>
             </Reveal>
             <Reveal>
                 <div>
-                    <h2 className="flex justify-center place-center">Time Until Next Event</h2>
+                    <h2 className="mt-8 flex justify-center place-center xs:text-[2em] sm:text-[2em]">Time Until Next Event</h2>
                     <div className="flex flex-col justify-center py-8">
                         <ShiftingCountdown />
                     </div>
