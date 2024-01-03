@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import pic1 from "@/public/ig/1.jpg";
 import pic2 from "@/public/ig/2.jpg";
-import pic3 from "@/public/ig/3.jpg";
+import pic3 from '@/public/ig/3.jpg';
 
 export function CarouselDefault() {
 
