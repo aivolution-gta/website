@@ -2,7 +2,7 @@
 
 # AiVolution
 
-A student-led organization focused on informing people about our technology future.
+A student-led organization focused around informing people about our technologically driven future.
 
 ## About Us
 
