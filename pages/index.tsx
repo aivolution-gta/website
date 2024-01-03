@@ -20,7 +20,7 @@ export default function Home () {
         },
         {
             role: "Dev Team",
-            members: ["Sohum", "Advay", "Aryan", "Rohan"]
+            members: ["Sohum", "Advay", "Aryan"]
         },
         {
             role: "Design Team",
