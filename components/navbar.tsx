@@ -32,14 +32,14 @@ export default function Navbar () {
     const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
 
     return (
-        <div className="font-bold flex justify-between w-screen bg-dark-purple xs:py-4">
+        <div className="font-bold flex justify-between w-screen bg-dark-purple xs:py-1">
             <div className="m-2">
                 <Link href="/">
                     <Image
                         src={Banner}
                         alt="logo"
                         height={60}
-                        className="rounded-full"
+                        className="rounded-lg "
                     />
                 </Link>
                 

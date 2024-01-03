@@ -1,4 +1,6 @@
 import React, { useState, FormEvent } from 'react';
+import { Reveal } from '../reveal';
+
 
 const ContactForm: React.FC = () => {
     const [name, setName] = useState('');
@@ -65,20 +67,20 @@ const ContactForm: React.FC = () => {
     }
 
     return (
-        <div className="w-screen">
-            <form className="flex items-center justify-center mb-[11px] mt-[1px]">
-                <div className="flex-col md:w-[939px] border-2 border-dark-purple/95 rounded-lg p-[40px] w-2/3">
-                    <h3 className="font-bold text-[#1B1541] text-[1.5em]">
+        <div className="w-full">
+            <form className="flex items-center justify-center mb-100">
+                <div className="flex-col md:w-[939px] border-2 border-dark-purple/95 rounded-lg p-[40px] xs:p-[20px] xs:w-[85%] ">
+                    <h3 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px]">
                         Name:
                     </h3>
                     <input
-                        className="outline-0 w-1/4 mb-[10px] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
+                        className="outline-0 mb-[10px] h-[50px] xs:h-[35px] xs:text-[0.85em] xs:mr-[15px] xs:w-[80%] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
 
-                    <h2 className="font-bold text-[#1B1541] text-[1.5em] ">
+                    <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px]">
                         Email:
                     </h2>
                     {emailError && (
@@ -87,34 +89,34 @@ const ContactForm: React.FC = () => {
                     </div>
                 )}
                     <input
-                        className="outline-0 w-1/4 mb-[10px] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
+                        className="outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-[90%] xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
 
-                    <h2 className="font-bold text-[#1B1541] text-[1.5em] ">
+                    <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px]">
                         Subject:
                     </h2>
                     <input
-                        className="outline-0 w-1/4 mb-[10px] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
+                        className="outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-[90%] xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                         type="text"
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                     />
 
-                    <h2 className="font-bold text-[#1B1541] text-[1.5em] ">
+                    <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px]">
                         Message:
                     </h2>
                     <textarea
-                        className="outline-0 w-full h-auto min-h-[150px] max-h-[400px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
+                        className="outline-0 xs:text-[0.85em] h-auto min-h-[150px] max-h-[400px] w-full bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
 
                 <button
                     onClick={handleSubmit}
-                    className="mt-[10px] w-full h-[60px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 text-xl hover:bg-dark-purple hover:text-white transition-all ease-in-out duration-500"
+                    className="mt-[10px] h-[60px] w-[855px] xs:w-[65%] xs:h-[40px] xs:text-[1em] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 text-xl hover:bg-dark-purple hover:text-white transition-all ease-in-out duration-500"
                     type="submit"
                 >
                     Send
@@ -137,16 +139,12 @@ const ContactForm: React.FC = () => {
             )}
 
             {errorMessage && (
-                <div className="fixed bottom-0 left-0 m-4 h-[60px] w-[1255px]">
-                    <div className="text-center p-5 bg-dark-purple w-1/3 rounded-lg text-white relative">
-                        <p>{errorMessage}</p>
-                        <button
-                            className="absolute top-2 right-2 cursor-pointer h-[25px]"
-                            onClick={() => setErrorMessage('')}
-                        >
-                            X
-                        </button>
-                    </div>
+                <div className="fixed xs:hidden bottom-20 left-20 m-4 h-[55px] w-[1255px]">
+                    <Reveal>
+                        <div className="text-center p-5 bg-dark-purple w-1/3 xs:w-1/4 xs:text-[0.85em] rounded-lg text-white relative">
+                            <p>{errorMessage}</p>
+                        </div>
+                    </Reveal>
                 </div>
             )}
         </div>
