@@ -71,7 +71,7 @@ export default function Home () {
                     <Reveal>
                         <div className="grid grid-cols-2 gap-4 mx-10">
                             {teamData.map((data, index) => {
-                                return <Accordion key={index} title={data.role} description={(<div className={`grid grid-cols-2 text-center gap-4`}>{data.members.map((person, i) => (<div className="col-span-1 border-2 border-dark-purple rounded-md select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105" key={i}><MuiModal name={person.name} bio={person.bio} pfp={`/team-pfp/${person.name}.jpg`} /></div>))}</div>)}/>;
+                                return <Accordion key={index} title={data.role} description={(<div className={`grid grid-cols-2 text-center gap-4`}>{data.members.map((person, i) => (<div className="col-span-1 border-2 border-dark-purple rounded-md select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105" key={i}><MuiModal name={person.name} bio={person.bio} /></div>))}</div>)}/>;
                             })}
                         </div>
                     </Reveal>

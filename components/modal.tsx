@@ -5,6 +5,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typewriter from "typewriter-effect";
 import { Avatar } from '@mui/material';
+import { IoMdClose } from 'react-icons/io';
 
 const style = {
 	position: 'absolute' as 'absolute',
@@ -21,10 +22,9 @@ const style = {
 interface MuiModalProps {
 	name: string,
 	bio: string,
-	pfp: any
 }
 
-export default function MuiModal({name, bio, pfp}: MuiModalProps) {
+export default function MuiModal({name, bio}: MuiModalProps) {
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
@@ -45,6 +45,11 @@ export default function MuiModal({name, bio, pfp}: MuiModalProps) {
 			>
 				<Fade in={open}>
 					<Box sx={style} className="bg-mid-purple rounded-md text-white">
+						<button className="absolute left-[740px]"
+							onClick={handleClose}
+						>
+							<IoMdClose size={30} className="hover:bg-light-purple/75 rounded-md" />
+						</button>
 						<h2 id="transition-modal-title" className="text-white mb-4 flex">
 							<Typewriter options={{strings: [`Hi, I'm ${name}`], autoStart: true, deleteSpeed: 1000000000000, delay: 50}}/>
 						</h2>
