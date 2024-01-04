@@ -14,7 +14,7 @@ export default function Home () {
         },
         {
             role: "Vice-Presidents",
-            members: [{name: "Nirupa", bio: ""}, {name: "Taha", bio: ""}]
+            members: [{name: "Nirupa", bio: ""}, {name: "Taha", bio: "A passionate 'chef', an avid traveller, a soccer fan, and a  'tech-savvy guy' is what I'd call myself. I enjoy seeking knowledge and using technology to my advantage. "}]
         },
         {
             role: "Secretaries",
