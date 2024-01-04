@@ -34,7 +34,7 @@ export default function Home () {
         },
         {
             role: "Outreach Members",
-            members: [{name: "Mahad", bio: ""}, {name: "Chris", bio: ""}, {name: "Mustafa", bio: ""}, {name: "Ryan", bio: "Hi, my name is Ryan. I am currently in high school and find the evolution of AI exciting and fascinating. An interest of mine is computer science and anything related to it. However, some other interests of mine that are not in the realm of computer science are movies and basketball. Overall, I find all of these topics very unique and compelling."}]
+            members: [{name: "Mahad", bio: "I am the Executive of Outreach at AiVolution and a Grade 10 student attending the International Baccalaureate Program at Erindale Secondary School. I am an aspiring student who is passionate about Robotics, Engineering, and Technology. I am pursuing the field of software development and engineering while achieving a dual diploma. Feel free to reach out to me!"}, {name: "Chris", bio: ""}, {name: "Mustafa", bio: ""}, {name: "Ryan", bio: "Hi, my name is Ryan. I am currently in high school and find the evolution of AI exciting and fascinating. An interest of mine is computer science and anything related to it. However, some other interests of mine that are not in the realm of computer science are movies and basketball. Overall, I find all of these topics very unique and compelling."}]
         },
         {
             role: "Finance Members",

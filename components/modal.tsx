@@ -4,15 +4,15 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typewriter from "typewriter-effect";
-import Image from 'next/image';
+import { Avatar } from '@mui/material';
 
 const style = {
 	position: 'absolute' as 'absolute',
 	top: '50%',
 	left: '50%',
 	transform: 'translate(-50%, -50%)',
-	width: 760,
-	height: 380,
+	width: 800,
+	height: 400,
 	boxShadow: 24,
 	pt: 4,
 	pl:4
@@ -45,23 +45,17 @@ export default function MuiModal({name, bio, pfp}: MuiModalProps) {
 			>
 				<Fade in={open}>
 					<Box sx={style} className="bg-mid-purple rounded-md text-white">
-						<h2 id="transition-modal-title" className="text-white mb-4">
+						<h2 id="transition-modal-title" className="text-white mb-4 flex">
 							<Typewriter options={{strings: [`Hi, I'm ${name}`], autoStart: true, deleteSpeed: 1000000000000, delay: 50}}/>
 						</h2>
-						<div className="flex">
-							<p id="transition-modal-description" className="text-white text-justify text-wrap w-[60%]">
-								{bio}
-							</p>
-						</div>
-						<div className="relative ml-12">
-							<Image 
-								src={pfp}
-								alt=""
-								height={200}
-								width={200}
-								className="rounded-full"
-							/> 
-						</div>
+						<p id="transition-modal-description" className="text-white text-justify text-wrap w-[55%] absolute">
+							{bio}
+						</p>
+						<Avatar
+							src={`/team-pfp/${name}.jpg`}
+							sx={{ width: 250, height: 250 }}
+							className="absolute left-[480px] bottom-[40px]" 
+						/>
 					</Box>
 				</Fade>
 			</Modal>
