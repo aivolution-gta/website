@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import { IoMdClose } from 'react-icons/io';
 import { Reveal } from '../reveal';
 
 
@@ -152,11 +153,11 @@ const ContactForm: React.FC = () => {
                 <div className="fixed bottom-0 left-0 m-4 h-[60px] w-[1255px]">
                     <div className="text-center p-5 bg-dark-purple w-1/3 rounded-lg text-white relative">
                         <p>Message sent</p>
-                        <button
-                            className="absolute top-2 right-2 cursor-pointer h-[25px]"
-                            onClick={closeMessage}
+                        <button 
+                          className="absolute top-2 right-2 cursor-pointer h-[25px]"
+                          onClick={closeMessage}
                         >
-                            X
+                          <IoMdClose size={15} className="hover:bg-light-purple/75 rounded-md" />
                         </button>
                     </div>
                 </div>
@@ -167,12 +168,13 @@ const ContactForm: React.FC = () => {
                     <Reveal>
                         <div className="text-center p-5 bg-dark-purple w-1/3 xs:w-1/4 xs:text-[0.85em] rounded-lg text-white relative">
                             <p>{errorMessage}</p>
-                            <button
-                                className="absolute top-2 right-2 cursor-pointer h-[25px]"
-                                onClick={() => setErrorMessage('')}
+                            <button 
+                              className="absolute top-2 right-2 cursor-pointer h-[25px]"
+                              onClick={() => setErrorMessage('')}
                             >
-                                X
-                            </button>  
+                              <IoMdClose size={30} className="hover:bg-light-purple/75 rounded-md" />
+                            </button>
+                            
                         </div>
                     </Reveal>
                 </div>
