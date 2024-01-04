@@ -4,7 +4,7 @@ import { Collapse } from 'react-collapse';
 
 interface AccordionProps {
     title: string,
-    description: any
+    description: JSX.Element,
 }
 
 export default function Accordion({title, description}: AccordionProps) {

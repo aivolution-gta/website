@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typewriter from "typewriter-effect";
+import Image from 'next/image';
 
 const style = {
 	position: 'absolute' as 'absolute',
@@ -13,15 +14,17 @@ const style = {
 	width: 760,
 	height: 380,
 	boxShadow: 24,
-	p: 4,
+	pt: 4,
+	pl:4
 };
 
 interface MuiModalProps {
 	name: string,
 	bio: string,
+	pfp: any
 }
 
-export default function MuiModal({name, bio}: MuiModalProps) {
+export default function MuiModal({name, bio, pfp}: MuiModalProps) {
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
@@ -45,9 +48,20 @@ export default function MuiModal({name, bio}: MuiModalProps) {
 						<h2 id="transition-modal-title" className="text-white mb-4">
 							<Typewriter options={{strings: [`Hi, I'm ${name}`], autoStart: true, deleteSpeed: 1000000000000, delay: 50}}/>
 						</h2>
-						<p id="transition-modal-description" className="text-white text-justify text-wrap w-[60%]">
-							{bio}
-						</p> 
+						<div className="flex">
+							<p id="transition-modal-description" className="text-white text-justify text-wrap w-[60%]">
+								{bio}
+							</p>
+						</div>
+						<div className="relative ml-12">
+							<Image 
+								src={pfp}
+								alt=""
+								height={200}
+								width={200}
+								className="rounded-full"
+							/> 
+						</div>
 					</Box>
 				</Fade>
 			</Modal>

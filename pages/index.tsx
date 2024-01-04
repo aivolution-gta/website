@@ -2,6 +2,7 @@ import { Reveal } from "@/components/reveal";
 import Accordion from "@/components/accordion";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
+import Image from "next/image";
 import MuiModal from "@/components/modal";
 
 export default function Home () {
@@ -9,7 +10,7 @@ export default function Home () {
     const teamData = [
         {
             role: "Presidents",
-            members: [{name: "Ashwath", bio: ""}, {name: "Devang", bio: "Hey, my name is Devang, and I am one of the two presidents and founders of AiVolution. I am an inquisitive person who is always interested in learning more, which I believe is reflected in my hobbies and passions. In the future, I hope to enter the field of astrophysics and pursue a career in research. While this all sounds serious, I do like to enjoy passing the time by practicing one of the many instruments I know, playing video games with my friends, and reading manhwa. While working on AiVolution, I hope I can continue to develop and grow my communication, management, and leadership skills!"}]
+            members: [{name: "Ashwath", bio: ""}, {name: "Devang", bio: "Hey, my name is Devang, and I am one of the presidents and founders of AiVolution. I am an inquisitive person who is always interested in learning more, which I believe is reflected in my hobbies and passions. In the future, I hope to become an astrophysicist and pursue a research career. Some of my hobbies are playing music, playing video games with my friends, and reading manhwa."}]
         },
         {
             role: "Vice-Presidents",
@@ -21,11 +22,11 @@ export default function Home () {
         },
         {
             role: "Developers",
-            members: [{name: "Sohum", bio: "As the tech head of AiVolution, I have always been interested in creating and developing applications. Recently, I've gained a passion for web development, and creating websites is one of my favourite pastimes. I have been programming for over 5 years now, and I don't plan to give it up because of how rewarding it is. Aside from that, my interests include mathematics, playing volleyball, and playing chess."}, {name: "Advay", bio: ""}, {name: "Aryan", bio: "Eager to embark on a journey of professional growth, I'm a high school student with a desire to gain knowledge in Programming and Computer Science. Through a combination of academic excellence, extracurricular involvement, and a thirst for knowledge, I am dedicated to improving my skills and gaining valuable experiences."}, {name: "Rohan", bio: ""}]
+            members: [{name: "Sohum", bio: "As the tech head of AiVolution, I have always been interested in creating and developing applications. Recently, I've gained a passion for web development, and creating websites is one of my favourite pastimes. I have been programming for over 5 years now, and I don't plan to give it up because of how rewarding it is. Aside from that, my interests include mathematics, playing volleyball, and playing chess."}, {name: "Aryan", bio: "Eager to embark on a journey of professional growth, I'm a high school student with a desire to gain knowledge in Programming and Computer Science. Through a combination of academic excellence, extracurricular involvement, and a thirst for knowledge, I am dedicated to improving my skills and gaining valuable experiences."}]
         },
         {
             role: "Design",
-            members: [{name: "Praney", bio: ""}, {name: "Mujtaba", bio: ""}, {name: "Salma", bio: ""}, {name: "Sonali", bio: "Hello, I'm Sonali, a design member at AiVolution. I've put together some of our Instagram posts using tools like Canva, Picsart, and Photoshop, focusing on aesthetics and visual texture for both visual appeal and audience enjoyment. Beyond design, my passion for storywriting adds a personal touch to my creations—a unique blend of visual and storytelling elements (:"}]
+            members: [{name: "Praney", bio: ""}, {name: "Salma", bio: ""}, {name: "Sonali", bio: "Hello, I'm Sonali, a design member at AiVolution. I've put together some of our Instagram posts using tools like Canva, Picsart, and Photoshop, focusing on aesthetics and visual texture for both visual appeal and audience enjoyment. Beyond design, my passion for storywriting adds a personal touch to my creations—a unique blend of visual and storytelling elements (:"}]
         },
         {
             role: "Marketing Members",
@@ -70,7 +71,7 @@ export default function Home () {
                     <Reveal>
                         <div className="grid grid-cols-2 gap-4 mx-10">
                             {teamData.map((data, index) => {
-                                return <Accordion key={index} title={data.role} description={(<div className={`grid grid-cols-2 text-center gap-4`}>{data.members.map((person, i) => (<div className="col-span-1 border-2 border-dark-purple rounded-md select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105" key={i}><MuiModal name={person.name} bio={person.bio}/></div>))}</div>)} />;
+                                return <Accordion key={index} title={data.role} description={(<div className={`grid grid-cols-2 text-center gap-4`}>{data.members.map((person, i) => (<div className="col-span-1 border-2 border-dark-purple rounded-md select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105" key={i}><MuiModal name={person.name} bio={person.bio} pfp={`/team-pfp/${person.name}.jpg`} /></div>))}</div>)}/>;
                             })}
                         </div>
                     </Reveal>
