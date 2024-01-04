@@ -59,7 +59,7 @@ const ShiftingCountdown = () => {
 
 const CountdownItem = ({ num, text }: { num: any; text: string }) => {
     return (
-        <div className="w-1/4 xs:w-full sm:w-full h-36 flex flex-col items-center justify-center text-[2em]">
+        <div className="w-1/4 xs:w-full sm:w-full h-36 flex flex-col items-center justify-center text-[2em] xs:text-[1.5em] sm:text-[1.5em]">
             <div className="w-full text-center relative overflow-hidden">
                 <AnimatePresence mode="popLayout">
                     <motion.span

@@ -24,7 +24,7 @@ export default function Home () {
         },
         {
             role: "Design Team",
-            members: ["Praney", "Mujtaba", "Salma", "Sonali"]
+            members: ["Praney", "Salma", "Sonali"]
         },
         {
             role: "Marketing Team",
@@ -48,7 +48,7 @@ export default function Home () {
                 <h1 
                     className="
                         block text-left my-20 ml-40 mr-32 text-[6em]
-                        xs:my-10 xs:mx-10 xs:text-[2.5em] xs:mb-44
+                        xs:my-10 xs:mx-10 xs:text-[2.5em]
                     "
                 >
                     A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br className="hidden xs:block" />organization focused around informing people about our technology driven future.
@@ -57,8 +57,8 @@ export default function Home () {
             </div>
             <div>
                 <Reveal>
-                    <div className="flex text-center justify-center place-center leading-loose">
-                        <h3 className="w-2/3 xs:text-[1em]">
+                    <div className="flex text-justify justify-center place-center leading-loose xs:my-44">
+                        <h3 className="w-2/3 xs:text-[1.25em] xs:w-3/4">
                             At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. We are an organization whose mission is to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
                         </h3>
                     </div>
@@ -107,10 +107,9 @@ export default function Home () {
                 <div 
                     className="
                         my-20 text-center p-8 bg-dark-purple w-1/3 rounded-lg text-white 
-                        xs:w-2/3
-                        "
+                        xs:w-5/6"
                     >
-                    <p>Want to sponsor us? Click <Link href="/contact">here</Link>!</p>
+                    <p>Interested in supporting our mission? Click <Link href="/contact">here</Link>!</p>
                 </div>
             </div>
         </div>
