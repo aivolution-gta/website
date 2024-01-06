@@ -7,8 +7,6 @@ const ContactForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
-    const [phone, setPhone] = useState('');
-    const [company, setCompany] = useState('');
     const [isMessageSent, setMessageSent] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -36,19 +34,17 @@ const ContactForm: React.FC = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, subject, message, phone, company }),
+            body: JSON.stringify({ name, email, subject, message}),
         });
 
         if (response.ok) {
-            console.log(`SUCCESS.\nNAME: ${name}\nEMAIL: ${email}\nSUBJECT: ${subject}\nMESSAGE: ${message}\nPHONE: ${phone}\nCOMPANY: ${company}`);
+            console.log(`SUCCESS.\nNAME: ${name}\nEMAIL: ${email}\nSUBJECT: ${subject}\nMESSAGE:`);
             setMessageSent(true);
             // Clear user inputs
             setName('');
             setEmail('');
             setSubject('');
             setMessage('');
-            setPhone('');
-            setCompany('');
         } else {
             console.log('ERROR OCCURRED');
             setErrorMessage('Error sending message. Please try again.');
