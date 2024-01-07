@@ -16,15 +16,15 @@ export default function Home () {
         },
         {
             role: "Secretaries",
-            members: ["Arush", "Sohun"]
+            members: ["Sohun"]
         },
         {
             role: "Dev Team",
-            members: ["Sohum", "Advay", "Aryan"]
+            members: ["Sohum", "Aryan"]
         },
         {
             role: "Design Team",
-            members: ["Praney", "Salma", "Sonali"]
+            members: ["Praney", "Asmetha", "Salma", "Sonali"]
         },
         {
             role: "Marketing Team",
