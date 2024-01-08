@@ -4,8 +4,11 @@
 
 * {
     font-family: "Poppins";
-    font-weight: bold;
     scroll-behavior: smooth;
+}
+
+p {
+    
 }
 
 html {
@@ -23,9 +26,9 @@ html::-webkit-scrollbar {
   }
 
 h1 {
-    font-family: "Poppins";
     font-size: 100px;
     letter-spacing: -3px;
+    font-weight: bold;
 }
 
 h2 {
@@ -43,12 +46,12 @@ h3 {
 
 a {
     color: #6A60A4;
-    transition: all linear;
-    transition-duration: 500ms;
+    transition: all ease-in-out;
+    transition-duration: 200ms;
 }
 
 a:hover {
-    color: #FFECBC;
+    color: #554C89;
 }
 
  
