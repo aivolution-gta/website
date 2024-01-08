@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "../public/aivolution-logo.png";
+import Banner from "../public/aivolution-banner.png";
 import Image from "next/image";
 import { IoIosMenu } from "react-icons/io";
 import { useState } from "react";
@@ -13,12 +14,12 @@ const links = [
     {
         name: "Updates",
         link: "/updates",
-        id: "2",
+        id: "1",
     },
     {
         name: "Contact",
         link: "/contact",
-        id: "1",
+        id: "2",
     },
     // {
     //     name: "past events",
@@ -31,14 +32,14 @@ export default function Navbar () {
     const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
 
     return (
-        <div className="font-bold flex justify-between w-screen bg-dark-purple xs:py-4">
+        <div className="font-bold flex justify-between w-screen bg-dark-purple xs:py-1">
             <div className="m-2">
                 <Link href="/">
                     <Image
-                        src={Logo}
+                        src={Banner}
                         alt="logo"
                         height={60}
-                        className="rounded-full"
+                        className="rounded-lg "
                     />
                 </Link>
                 
@@ -55,17 +56,14 @@ export default function Navbar () {
                 )}
             </div>
             
-            <div className="my-auto mx-2 hidden xs:block text-beige rounded-xl">
-                <IoIosMenu className="inline m-2" size={40} onClick={() => {setDropdownIsOpen(!dropdownIsOpen)}}/>
+            <div className="my-auto mx-2 hidden xs:block text-beige rounded-xl z-20">
+                <IoIosMenu className="inline m-2 hover:cursor-pointer" size={40} onClick={() => {setDropdownIsOpen(!dropdownIsOpen)}}/>
 
                 {dropdownIsOpen &&
-                    <div className="flex flex-col absolute top-[5.5rem] right-[0.5rem] w-[120px] rounded-lg bg-white border-light-purple text-right"
-                    >
-                        <ul className="flex flex-col">
-                            {links.map(({name, link, id}) => 
-                                <li key={id} className="hover:bg-[#AAAAAA] py-4 pr-6"><Link href={link}>{name}</Link></li>
-                            )}
-                        </ul>
+                    <div className="flex flex-col absolute top-[5.5rem] right-[0.5rem] w-[120px] rounded-lg bg-white border-light-purple text-right">
+                        {links.map(({name, link, id}) => 
+                            <Link key={id} href={link} className={`w-full h-full pr-6 py-2 hover:bg-[#AAAAAA] ${ id == '0' ? 'hover:rounded-t-md' : (id == (links.length - 1).toString() ? "hover:rounded-b-md" : "") }`}>{name}</Link>
+                        )}
                     </div>
                 }
                 

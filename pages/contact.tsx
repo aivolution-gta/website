@@ -8,28 +8,29 @@ export default function Contact() {
     return (
         <div className="w-screen flex flex-col min-h-screen">
             <Reveal>
-                <h1 className="flex justify-center place-center my-2">Contact</h1>
+                <h1 className="flex justify-center place-center my-2 xs:text-[3em] sm:text-[3em]">Contact</h1>
             </Reveal>
 
             <Reveal>
                 <div>
                     <div className="flex justify-center">
-                        <h3 className="text-center mb-4 w-5/12">If you have a request, feedback, or business inquiry, feel free to send a message through the contact form, and our team will reach out to you!</h3>
+                        <h3 className="text-center mb-12 w-7/12 xs:w-[80%] xs:text-[0.85em] ">If you have a request, feedback, or business inquiry, feel free to send a message through the contact form, and our team will reach out to you!</h3>
                     </div>
                     <ContactForm />
+                    
                 </div>
             </Reveal>
 
-            <div className="flex items-center justify-center pr-5 pl-5 flex-grow">
-                <div className="flex items-center justify-center flex-col md:w-[939px] px-10 py-8">
+            <div className="flex items-center justify-center flex grow">
+                <div className="flex items-center justify-center flex-col md:w-[939px] xs:h-[100px] mx-10 my-8 xs:my-2">
                     <Reveal>
-                        <h2 className="font-bold text-gray-950 text-lg mb-3">
+                        <h2 className="font-bold text-gray-950 text-lg mb-3 text-center xs:text-[1em]">
                             Other ways you can contact us:
                         </h2>
                     </Reveal>
 
                     <Reveal>
-                        <div className="flex flex-wrap gap-4 mb-3 items-center justify-center border-dark-purple border-2 rounded-lg bg-dark-purple px-16 py-4">
+                        <div className="flex flex-wrap gap-4 mb-3 items-center justify-center border-dark-purple border-2 rounded-lg bg-dark-purple px-16 py-4 xs:py-2 xs:px-8">
                             <a href="mailto:AiVolutionteam@gmail.com" target="_blank">
                                 <p className="text-md font-bold">
                                     <IoMdMail className="inline" size={28} />

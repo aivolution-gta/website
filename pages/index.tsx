@@ -47,14 +47,14 @@ export default function Home () {
             {/* Hero Section */}
             <div className="w-full">
                 <Reveal>
-                <h1 
-                    className="
-                        block text-left my-20 ml-40 mr-32 text-[6em]
-                        xs:my-10 xs:mx-10 xs:text-[2.5em]
-                    "
-                >
-                    A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br className="hidden xs:block" />organization focused around informing people about our technology driven future.
-                </h1>
+                    <h1 
+                        className="
+                            block text-left my-20 ml-40 mr-32 text-[6em]
+                            xs:my-10 xs:mx-10 xs:text-[2.5em]
+                        "
+                    >
+                        A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br className="hidden xs:block" />organization focused around informing people about our technology driven future.
+                    </h1>
                 </Reveal>
             </div>
             <div>

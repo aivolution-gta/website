@@ -4,12 +4,12 @@ import { IoMdMail } from 'react-icons/io';
 export default function Footer() {
 
     return(
-        <div className="mt-20 text-white bottom-0 w-full bg-dark-purple min-h-[4em] flex justify-center">
+        <div className="mt-20 text-white bottom-0 w-screen bg-dark-purple min-h-[4em] flex justify-center xs:py-6">
             <div className="w-full flex flex-col justify-center">
-                <div className="w-full flex justify-evenly ">
-                    <div className="w-1/3"></div>
-                    <div>Made with ❤️ by the <a href="https://github.com/padhyeSohum/aivolution-website" target="_blank" className="">AiVolution Dev Team</a></div>
-                    <div className="flex justify-end w-1/3">
+                <div className="w-full flex xs:flex-col justify-evenly text-center">
+                    <div className="w-1/3 xs:hidden"></div>
+                    <p>Made with ❤️ by the <br className="hidden xs:block"/><a href="https://github.com/padhyeSohum/aivolution-website" target="_blank" className="">AiVolution Dev Team</a></p>
+                    <div className="flex justify-end w-1/3 xs:w-full xs:justify-center xs:mt-4">
                         <a href="mailto:AiVolutionteam@gmail.com" target="_blank">
                             <p className="text-md font-bold">
                                 <IoMdMail className="inline mx-1" size={28} />
@@ -33,7 +33,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-                
         </div>
     )
 }
