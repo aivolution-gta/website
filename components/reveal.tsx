@@ -2,10 +2,16 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from  "framer-motion";
 
 interface revealProps {
-    children: JSX.Element;
+    children: any,
+    width?: "fit-content" | "100%",
+    yOffset?: number,
 }
 
-export const Reveal = ({ children}: revealProps) => {
+Reveal.defaultProps = {
+    yOffset: 75,
+}
+
+export function Reveal ({ children, width = "fit-content", yOffset}: revealProps) {
     const ref = useRef(null);
     const isInView = useInView(ref)
 
@@ -21,7 +27,7 @@ export const Reveal = ({ children}: revealProps) => {
         <div ref={ref}>
             <motion.div
                 variants={{
-                    hidden: { opacity: 0, y: 75 },
+                    hidden: { opacity: 0, y: yOffset },
                     visible: { opacity: 1, y: 0 },
                 }}
                 initial="hidden"

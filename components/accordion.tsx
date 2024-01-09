@@ -4,7 +4,7 @@ import { Collapse } from 'react-collapse';
 
 interface AccordionProps {
     title: string,
-    description: any
+    description: JSX.Element,
 }
 
 export default function Accordion({title, description}: AccordionProps) {
@@ -13,7 +13,7 @@ export default function Accordion({title, description}: AccordionProps) {
 
     return (
         <div className="text-white my-4">
-            <div className={`border-dark-purple border-2 bg-mid-purple py-[25px] px-[50px] flex justify-between items-center cursor-pointer`}
+            <div className={`border-dark-purple border-2 bg-mid-purple py-[25px] px-[50px] flex justify-between items-center cursor-pointer ${open ? "rounded-t-md" : "rounded-md"}`}
                 onClick={() => {setOpen(!open)}}
             >
                 <h3 className="">{title}</h3>
@@ -23,7 +23,7 @@ export default function Accordion({title, description}: AccordionProps) {
             </div>
 
             <Collapse isOpened={open}>
-                <div className="border-dark-purple border-x-2 border-b-2 bg-light-purple/95 px-[50px] py-[20px]">{description}</div>
+                <div className="border-dark-purple border-x-2 border-b-2 border--2 bg-light-purple/95 px-[50px] py-[20px] rounded-b-md text-[1.25em]">{description}</div>
             </Collapse>
         </div>
     )

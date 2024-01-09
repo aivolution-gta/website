@@ -3,21 +3,6 @@ import { IoMdMail } from 'react-icons/io';
 
 export default function Footer() {
 
-    // const socials = [
-    //     {
-    //         link: '',
-    //         icon:
-    //     },
-    //     {
-    //         link:,
-    //         icon:
-    //     },
-    //     {
-    //         link:,
-    //         icon:
-    //     }
-    // ]
-
     return(
         <div className="mt-20 text-white bottom-0 w-screen bg-dark-purple min-h-[4em] flex justify-center xs:py-6">
             <div className="w-full flex flex-col justify-center">
