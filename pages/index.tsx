@@ -18,7 +18,7 @@ export default function Home () {
         },
         {
             role: "Secretaries",
-            members: [{name: "Sohun", bio: "", links: {"linkedin": "", "gmail": "", "instagram": ""}}, {name: "Maryam", bio: "Hi! I'm Maryam khan and I'm the secretary for AiVolution, my role as a secretary helps to ensure the attendance of members, hours of completion and much more! I'm a art enthusiast with a newfound passion of tech that i strive to partake in alongside my karate and graphic design journey. I recently got to be apart of this team just this week. I cant wait for AiVolution's upcoming events!", links: {"linkedin": "", "gmail": "", "instagram": ""}}]
+            members: [{name: "Sohun", bio: "Hey, I am Sohun Jhaveri, one of the secretaries at AiVolution. I am always busy doing something, whether that be completing school work, or playing various sports like volleyball and going out with my family. I am also a travel enthusiast :)", links: {"linkedin": "", "gmail": "", "instagram": "08_sohun"}}, {name: "Maryam", bio: "Hi! I'm Maryam khan and I'm the secretary for AiVolution, my role as a secretary helps to ensure the attendance of members, hours of completion and much more! I'm a art enthusiast with a newfound passion of tech that i strive to partake in alongside my karate and graphic design journey. I recently got to be apart of this team just this week. I cant wait for AiVolution's upcoming events!", links: {"linkedin": "", "gmail": "", "instagram": ""}}]
         },
         {
             role: "Developers",
@@ -53,7 +53,7 @@ export default function Home () {
                             xs:my-10 xs:mx-10 xs:text-[2.5em]
                         "
                     >
-                        A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br className="hidden xs:block" />organization focused around informing people about our technology driven future.
+                        A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br />organization focused around informing people about our technology driven future.
                     </h1>
                 </Reveal>
             </div>
