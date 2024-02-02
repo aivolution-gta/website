@@ -121,8 +121,8 @@ export default function Home () {
                 <div className="w-5/6 rounded-lg grid grid-cols-1 gap-8 p-8 place-items-center">
                     
                     {partners.map((partner, i) => (
-                        <Reveal>
-                        <div className="" key={i}>
+                        <Reveal key={i}>
+                        <div className="">
                             {
                                 i % 2 == 0 ? 
                                 <div className="rounded-md p-2 grid grid-cols-3 w-full m-4">
