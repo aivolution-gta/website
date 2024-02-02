@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import MuiModal from "@/components/modal";
 
+import SteamIc from "../public/partners/steam-ic.png";
+
 export default function Home () {
 
     const teamData = [
@@ -41,6 +43,15 @@ export default function Home () {
             members: [{name: "Anuhya", bio: "As the Head of Finance at Aivolution, a non-profit organization dedicated to educate a bigger community provoking conferences on AI and our future! Here at Aivolution I spearhead financial strategy, management, and leadership. Proudly embracing my passion for mathematics and programming, showcasing proficiency in web development. Its an honor to work with such a greatly coordinated team :)", links: {"linkedin": "https://www.linkedin.com/in/anuhya-krishna-nakka-b65a1b27a/", "gmail": "anuhya.ash@gmail.com", "instagram": "anuhya_krishnas"}}]
         },
     ]
+
+    const partners = [
+        {
+            name: "Steam Innovation Challenge", 
+            link: "https://steaminnovationchallenge.org/steam-icac/", 
+            bio: "The STEAM Innovation Challenge is an Ontario-wide competition that allows youth the opportunity to innovate and solve real-world problems in the fields of astronomy,  engineering, or life sciences. Participants present their innovation at STEAM ICAC (held in Toronto) where they can network with industry professionals. Those who rank at STEAM ICAC earn the STEAM IC Trophy, a cash prize, and university recognition.", 
+            img: SteamIc
+        }
+    ];
 
     return (
         <div className="w-screen">
@@ -102,6 +113,47 @@ export default function Home () {
                         </div>
                     </Reveal>
                 </div>
+            </div>
+
+            {/* Partners and Sponsors */}
+            <div className="w-full flex flex-col place-items-center my-16">
+                <Reveal><h1>Partners</h1></Reveal>
+                <div className="w-5/6 rounded-lg grid grid-cols-1 gap-8 p-8 place-items-center">
+                    
+                    {partners.map((partner, i) => (
+                        <Reveal>
+                        <div className="" key={i}>
+                            {
+                                i % 2 == 0 ? 
+                                <div className="rounded-md p-2 grid grid-cols-3 w-full m-4">
+                                    <div className="w-full flex justify-center">
+                                        <a href={partner.link}><Image src={partner.img} alt="partner" className=""/></a>
+                                    </div>
+                                    <div className="col-span-2 flex flex-col justify-evenly">
+                                        <h2 className="text-center">{partner.name}</h2>
+                                        <p className="text-justify leading-loose">{partner.bio}</p>
+                                    </div>
+                                </div>
+                                :
+                                <div className="rounded-md p-2 grid grid-cols-3 w-full m-4">
+                                    <div className="col-span-2 flex flex-col justify-evenly">
+                                        <h2 className="text-center">{partner.name}</h2>
+                                        <p className="text-justify leading-loose">{partner.bio}</p>
+                                    </div>
+                                    <div className="w-full flex justify-center">
+                                        <a href={partner.link}><Image src={partner.img} alt="partner" className=""/></a>
+                                    </div>
+                                </div>
+                            }
+                            
+                            <hr />
+                        </div>
+                        </Reveal>
+                    ))}
+                </div>
+
+                {/* <h1>Sponsors</h1>
+                <div className=""></div> */}
             </div>
 
             {/* Sponsor Message */}

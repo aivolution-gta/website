@@ -36,6 +36,10 @@ h3 {
     font-size: 26px;
 }
 
+p {
+    font-size: 20px;
+}
+
 .ReactCollapse--collapse {
     transition: all 500ms;
 }
