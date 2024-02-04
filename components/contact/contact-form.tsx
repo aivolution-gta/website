@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
         }
 
         // Send email using Nodemailer
-        const response = await fetch('/api/send-email', {
+        const response = await fetch('/api/contact/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

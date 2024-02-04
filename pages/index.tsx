@@ -36,7 +36,7 @@ export default function Home () {
         },
         {
             role: "Outreach Members",
-            members: [{name: "Mahad", bio: "I am the Executive of Outreach at AiVolution and a Grade 10 student attending the International Baccalaureate Program at Erindale Secondary School. I am an aspiring student who is passionate about Robotics, Engineering, and Technology. I am pursuing the field of software development and engineering while achieving a dual diploma. Feel free to reach out to me!", links: {"linkedin": "https://linkedin.com/in/mahad-qureshi-580981290", "gmail": "mahadqureshi555@gmail.com", "instagram": "itz.mahad"}}, {name: "Chris", bio: "My name is Chris, I'm currently a student at GlenForest Secondary School and I work as an outreach general member for Aivolution. I enjoy playing sports and I am passionate about artificial intelligence and how it can improve our lives.", links: {"linkedin": "", "gmail": "", "instagram": "yk_chris.08"}}, {name: "Mustfa", bio: "Hi! I am a high school student who is passionate about AI and other areas of STEM, such as engineering. I have participated in several coding and math competitions and achieved high placements in a few. When I grow up, I want to pursue a career in IT. Besides academics, I enjoy playing basketball and video games. My goal in AiVolution is to help the youth with open opportunities regarding STEM. ", links: {"linkedin": "", "gmail": "mustfa204695@gmail.com", "instagram": "mustfaaa_._._"}}, {name: "Ryan", bio: "Hi, my name is Ryan. I am currently in high school and find the evolution of AI exciting and fascinating. An interest of mine is computer science and anything related to it. However, some other interests of mine that are not in the realm of computer science are movies and basketball. Overall, I find all of these topics very unique and compelling.", links: {"linkedin": "https://www.linkedin.com/in/ryan-huo-37222a2a1/", "gmail": "", "instagram": ""}}]
+            members: [{name: "Chris", bio: "My name is Chris, I'm currently a student at GlenForest Secondary School and I work as an outreach general member for Aivolution. I enjoy playing sports and I am passionate about artificial intelligence and how it can improve our lives.", links: {"linkedin": "", "gmail": "", "instagram": "yk_chris.08"}}, {name: "Mustfa", bio: "Hi! I am a high school student who is passionate about AI and other areas of STEM, such as engineering. I have participated in several coding and math competitions and achieved high placements in a few. When I grow up, I want to pursue a career in IT. Besides academics, I enjoy playing basketball and video games. My goal in AiVolution is to help the youth with open opportunities regarding STEM. ", links: {"linkedin": "", "gmail": "mustfa204695@gmail.com", "instagram": "mustfaaa_._._"}}, {name: "Ryan", bio: "Hi, my name is Ryan. I am currently in high school and find the evolution of AI exciting and fascinating. An interest of mine is computer science and anything related to it. However, some other interests of mine that are not in the realm of computer science are movies and basketball. Overall, I find all of these topics very unique and compelling.", links: {"linkedin": "https://www.linkedin.com/in/ryan-huo-37222a2a1/", "gmail": "", "instagram": ""}}]
         },
         {
             role: "Finance Members",
@@ -47,7 +47,7 @@ export default function Home () {
     const partners = [
         {
             name: "Steam Innovation Challenge", 
-            link: "https://steaminnovationchallenge.org/steam-icac/", 
+            link: "https://steaminnovationchallenge.org/", 
             bio: "The STEAM Innovation Challenge is an Ontario-wide competition that allows youth the opportunity to innovate and solve real-world problems in the fields of astronomy,  engineering, or life sciences. Participants present their innovation at STEAM ICAC (held in Toronto) where they can network with industry professionals. Those who rank at STEAM ICAC earn the STEAM IC Trophy, a cash prize, and university recognition.", 
             img: SteamIc
         }
@@ -127,7 +127,7 @@ export default function Home () {
                                 i % 2 == 0 ? 
                                 <div className="rounded-md p-2 grid grid-cols-3 w-full m-4">
                                     <div className="w-full flex justify-center">
-                                        <a href={partner.link}><Image src={partner.img} alt="partner" className=""/></a>
+                                        <a href={partner.link} target="_blank"><Image src={partner.img} alt="partner" className=""/></a>
                                     </div>
                                     <div className="col-span-2 flex flex-col justify-evenly">
                                         <h2 className="text-center">{partner.name}</h2>
@@ -141,7 +141,7 @@ export default function Home () {
                                         <p className="text-justify leading-loose">{partner.bio}</p>
                                     </div>
                                     <div className="w-full flex justify-center">
-                                        <a href={partner.link}><Image src={partner.img} alt="partner" className=""/></a>
+                                        <a href={partner.link} target="_blank"><Image src={partner.img} alt="partner" className=""/></a>
                                     </div>
                                 </div>
                             }
