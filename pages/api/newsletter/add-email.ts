@@ -13,6 +13,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             const client = await clientPromise;
             const db = client.db("aivolution");
 
+            const existingEmail = await db.collection("newsletter_emails").findOne({ email: email })
+
+            if (existingEmail) {
+                return res.status(200).json({ message: 'This email already exists'});
+            }
+
             await db.collection("newsletter_emails").insertOne({ email })
 
             return res.status(201).json({ message: 'Email added to the database' });
