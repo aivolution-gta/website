@@ -1,33 +1,24 @@
 import React, { useState, FormEvent } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { Reveal } from '../reveal';
-import axios from "axios";
 
 
-const RegistrationForm: React.FC = () => {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+const LogInForm: React.FC = () => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [emailError, setEmailError] = useState('');
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
 
-        // Check if inputs not empty
-        if (!firstName || !lastName || !email || !password) {
+        // Validate inputs
+        if (!name || !email) {
             setErrorMessage('Please fill in all required fields.');
             return;
         }
 
         // Validate email
-        const validateEmail = (email: string) => {
-            // Use a regex to validate the email format
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-
         if (!validateEmail(email)) {
             setEmailError('Invalid email address.');
             return;
@@ -35,22 +26,30 @@ const RegistrationForm: React.FC = () => {
             setEmailError('');
         }
 
-        // Api
-        try {
-            const response = await axios.post('/api/user-accounts/register', { firstName: firstName, lastName: lastName, email: email, password: password });
+        // Send email using Nodemailer
+        const response = await fetch('/api/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email}),
+        });
 
-            if (response.status === 201) {
-                console.log(`SUCCESS.\nNAME: ${firstName}\nEMAIL: ${email}`);
-
-                // Clear user inputs
-                setFirstName('');
-                setLastName('');
-                setEmail('');
-                setPassword('');
-            }
-        } catch (error: any) {
-            console.log(error.message);
+        if (response.ok) {
+            console.log(`SUCCESS.\nNAME: ${name}\nEMAIL: ${email}`);
+            // Clear user inputs
+            setName('');
+            setEmail('');
+        } else {
+            console.log('ERROR OCCURRED');
+            setErrorMessage('Error sending message. Please try again.');
         }
+    }
+
+    const validateEmail = (email: string) => {
+        // Use a regex to validate the email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 
     return (
@@ -60,29 +59,15 @@ const RegistrationForm: React.FC = () => {
 
                     <div className="flex justify-center">
                         <div className="flex-col w-5/6 mt-4">
-                            <h3 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px] mb-2">
-                                First Name:
+                            <h3 className="font-bold w  text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px] mb-2">
+                                Name:
                             </h3>
 
                             <input
                                 className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                                 type="text"
-                                value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)}
-                            />
-                        </div>
-                    </div>
-                    <div className="flex justify-center">
-                        <div className="flex-col w-5/6 mt-4">
-                            <h3 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px] mb-2">
-                                Last Name:
-                            </h3>
-
-                            <input
-                                className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
-                                type="text"
-                                value={lastName}
-                                onChange={(e) => setLastName(e.target.value)}
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
                             />
                         </div>
                     </div>
@@ -104,20 +89,6 @@ const RegistrationForm: React.FC = () => {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                            />
-                        </div>
-                    </div>
-                    <div className="flex justify-center">
-                        <div className="flex-col w-5/6 mt-4">
-                            <h3 className="font-bold w  text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px] mb-2">
-                                Password:
-                            </h3>
-
-                            <input
-                                className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
-                                type="text"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
                     </div>
@@ -154,4 +125,4 @@ const RegistrationForm: React.FC = () => {
     );
 }
 
-export default RegistrationForm;
+export default LogInForm;

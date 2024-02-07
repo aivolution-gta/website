@@ -21,11 +21,11 @@ const links = [
         link: "/contact",
         id: "2",
     },
-    // {
-    //     name: "past events",
-    //     link: "/past-events",
-    //     id: "3",
-    // }
+    {
+        name: "Sign In",
+        link: "/sign-in",
+        id: "3",
+    },
 ];
 
 export default function Navbar () {
