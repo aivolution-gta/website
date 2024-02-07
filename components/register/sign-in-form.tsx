@@ -1,24 +1,34 @@
 import React, { useState, FormEvent } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { Reveal } from '../reveal';
+import axios from "axios";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 
 const LogInForm: React.FC = () => {
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [emailError, setEmailError] = useState('');
+    const router = useRouter();
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
 
-        // Validate inputs
-        if (!name || !email) {
+        // Check if inputs not empty
+        if (!email|| !password) {
             setErrorMessage('Please fill in all required fields.');
             return;
         }
 
         // Validate email
+        const validateEmail = (email: string) => {
+            // Use a regex to validate the email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
         if (!validateEmail(email)) {
             setEmailError('Invalid email address.');
             return;
@@ -26,51 +36,25 @@ const LogInForm: React.FC = () => {
             setEmailError('');
         }
 
-        // Send email using Nodemailer
-        const response = await fetch('/api/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email}),
-        });
+        //
+        try {
+            const response = await axios.post('/api/user-accounts/register', { email: email, password: password });
 
-        if (response.ok) {
-            console.log(`SUCCESS.\nNAME: ${name}\nEMAIL: ${email}`);
-            // Clear user inputs
-            setName('');
-            setEmail('');
-        } else {
-            console.log('ERROR OCCURRED');
-            setErrorMessage('Error sending message. Please try again.');
+            if (response.status === 200) {
+                setEmail('');
+                setPassword('');
+                router.push("/dashboard")
+            }
+            
+        } catch (error: any) {
+            console.log(error.message);
         }
-    }
-
-    const validateEmail = (email: string) => {
-        // Use a regex to validate the email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
     }
 
     return (
         <div className="w-full">
             <form className="flex items-center justify-center">
                 <div className="items-center flex-col border-2 border-dark-purple rounded-lg w-1/2 xs:w-5/6 sm:w-5/6">
-
-                    <div className="flex justify-center">
-                        <div className="flex-col w-5/6 mt-4">
-                            <h3 className="font-bold w  text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px] mb-2">
-                                Name:
-                            </h3>
-
-                            <input
-                                className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
-                                type="text"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                        </div>
-                    </div>
 
                     <div className="flex justify-center">
                         <div className="flex flex-col w-5/6 mt-4">
@@ -89,6 +73,21 @@ const LogInForm: React.FC = () => {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <div className="flex-col w-5/6 mt-4">
+                            <h3 className="font-bold w  text-[#1B1541] text-[1.5em] xs:text-[1em] xs:mb-[10px] mb-2">
+                                Password:
+                            </h3>
+
+                            <input
+                                className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
+                                type="text"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
                     </div>
