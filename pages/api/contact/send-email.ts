@@ -1,18 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-const nodemailer = require("nodemailer");
+import transporter from "../../../lib/nodemailer";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === "POST") {
         const {name, email, subject, message} = req.body;
-
-        const transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 587,
-            auth: {
-                user: process.env.EMAIL,
-                pass: process.env.EMAIL_PASS,
-            },
-        });
 
         await transporter.sendMail({
             from: process.env.EMAIL,
@@ -26,3 +17,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.status(405).json({ message: 'Method Not Allowed'});
     }
 }
+
+export default handler;

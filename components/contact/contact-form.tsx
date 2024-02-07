@@ -79,6 +79,7 @@ const ContactForm: React.FC = () => {
                                 type="text"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
+                                required
                             />
                         </div>
                     </div>
@@ -100,6 +101,7 @@ const ContactForm: React.FC = () => {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                required
                             />
                         </div>
                     </div>
@@ -115,6 +117,7 @@ const ContactForm: React.FC = () => {
                                 type="text"
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
+                                required
                             />
                         </div>
                     </div>
@@ -129,6 +132,7 @@ const ContactForm: React.FC = () => {
                                 className="outline-0 xs:text-[0.85em] h-auto min-h-[150px] max-h-[400px] w-full bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
+                                required
                             ></textarea>
                         </div>
                     </div>
@@ -160,7 +164,7 @@ const ContactForm: React.FC = () => {
             )}
 
             {errorMessage && (
-                <div className="fixed md:bottom-20 md:left-20 lg:bottom-20 lg:left-20 xl:bottom-20 xl:left-20 sm:top-20 sm:left-20 m-4 h-[55px] w-[1255px]">
+                <div className="fixed md:bottom-20 md:left-20 lg:bottom-20 lg:left-20 xl:bottom-20 xl:left-20 2xl:bottom-20 2xl:left-20 sm:top-20 sm:left-20 m-4 h-[55px] w-[1255px]">
                     <Reveal>
                         <div className="text-center p-5 bg-dark-purple w-1/3 xs:w-1/4 xs:text-[0.85em] rounded-lg text-white relative">
                             <p>{errorMessage}</p>

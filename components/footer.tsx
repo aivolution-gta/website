@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 import axios from "axios";
@@ -6,10 +6,11 @@ import axios from "axios";
 export default function Footer() {
 
     const [email, setEmail] = useState('');
+    const [emailIsValid, setEmailIsValid] = useState(false);
     const [message, setMessage] = useState('');
     const [emailInProgress, setEmailInProgress] = useState(false);
 
-    const handleEmailSubmit = async (e: any) => {
+    const handleEmailSubmit = async (e: FormEvent) => {
         e.preventDefault();
 
         try {
@@ -24,6 +25,12 @@ export default function Footer() {
         }
     }
 
+    const handleEmailChange = (email: string) => {
+        setEmail(email);
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        setEmailIsValid(emailRegex.test(email))
+    }
+
     return(
         <div className="mt-20 text-white bottom-0 w-screen">
             <div className="bg-dark-purple/80 p-4 flex justify-center xs:py-6">
@@ -34,11 +41,11 @@ export default function Footer() {
                             <input
                                 type="email"
                                 value={email}
-                                onChange={(e) => {setEmail(e.target.value)}}
+                                onChange={(e) => {handleEmailChange(e.target.value)}}
                                 className="font-bold w-full text-[#1B1541] rounded-md leading-loose px-2 outline-none mb-2"
                                 placeholder="Email"
                             />
-                            <button type="submit" disabled={emailInProgress} className="w-full rounded-md border-mid-purple bg-light-purple hover:bg-mid-purple transition duration-200 leading-loose">Submit</button>
+                            <button type="submit" disabled={emailInProgress || !emailIsValid} className={`w-full rounded-md border-mid-purple bg-light-purple ${emailInProgress || !emailIsValid ? "bg-light-purple/50 hover:cursor-not-allowed" : "hover:bg-mid-purple"} transition duration-200 leading-loose`}>Submit</button>
                         </div>
                     </form>
                 </div>

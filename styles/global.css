@@ -54,4 +54,6 @@ a:hover {
     color: #554C89;
 }
 
- 
+button {
+    user-select: none;
+}
