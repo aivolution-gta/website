@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal";
 import RegistrationForm from "@/components/register/registration-form";
 import Link from "next/link";
 
-export default function Registration() {
+export default function Register() {
     return (
         <div className="w-screen flex flex-col min-h-screen">
             <Reveal>

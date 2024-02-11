@@ -21,11 +21,6 @@ const links = [
         link: "/contact",
         id: "2",
     },
-    {
-        name: "Sign In",
-        link: "/sign-in",
-        id: "3",
-    },
 ];
 
 export default function Navbar () {
@@ -54,6 +49,13 @@ export default function Navbar () {
                         {name}
                     </Link>
                 )}
+                <Link
+                        key={"3"}
+                        href={"/sign-in"}
+                        className="hover:bg-white/75 bg-mid-purple text-white mx-4 px-4 py-4 my-auto transition-all rounded-lg hover:text-mid-purple duration-300"
+                >
+                    Sign In
+                </Link>
             </div>
             
             <div className="my-auto mx-2 hidden xs:block text-beige rounded-xl z-20">

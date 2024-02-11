@@ -85,7 +85,7 @@ const LogInForm: React.FC = () => {
 
                             <input
                                 className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
-                                type="text"
+                                type="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
@@ -98,7 +98,7 @@ const LogInForm: React.FC = () => {
                             className="mt-[30px] mb-[20px] h-[60px] w-1/2 xs:w-[65%] xs:h-[40px] xs:text-[1em] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 text-xl hover:bg-dark-purple hover:text-white transition-all ease-in-out duration-500"
                             type="submit"
                         >
-                            Register Now
+                            Sign In
                         </button>
                     </div>
                 </div>

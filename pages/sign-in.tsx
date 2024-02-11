@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal";
 import LogInForm from "@/components/register/sign-in-form";
 import Link from "next/link";
 
-export default function Registration() {
+export default function SignIn() {
     return (
         <div className="w-screen flex flex-col min-h-screen">
             <Reveal>
@@ -12,7 +12,7 @@ export default function Registration() {
                 <div className="flex justify-center">
                         <Link
                             className="mt-[30px] mb-[20px]w-1/2 xs:text-[1em] text-black rounded-lg text-xl hover:text-white transition-all ease-in-out duration-500"
-                            href={"/registration"}
+                            href={"/register"}
                         >
                             Dont have an account yet? Register now!
                         </Link>
