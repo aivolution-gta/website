@@ -28,11 +28,11 @@ export default function Home () {
         },
         {
             role: "Marketing Members",
-            members: [{name: "Akshitha", bio: "Hey, I'm Akshitha! I'm the head of marketing at AiVolution! I mainly handle the marketing team and control how the posts get uploaded. I recently joined the team in November and then had to chance to lead my own marketing subunit in December. I thoroughly enjoy being with both teams, and apart from being with AiVolution, I enjoy baking, cooking, and listening to music :)", links: {"linkedin": "https://www.linkedin.com/in/akshitha-ragavan-a882ab282/", "gmail": "", "instagram": "unhakied"}}, {name: "Adam", bio: "Hi! I am currently a high school student who is passionate about AI, computers and anything STEM related. I try to keep an open-mind and to always keep learning and improving. Besides academics, I enjoy playing video games, and table tennis. My goal at AiVolution is to help others and encourage them to learn more about AI.", links: {"linkedin": "", "gmail": "", "instagram": ""}}, {name: "Arjun", bio: "Hello, I am Arjun Garg. I am a general member at Aivolution and I love working in promotion. I love business and am intrigued by AI. I can’t wait to see where we can take Aivolution!", links: {"linkedin": "", "gmail": "", "instagram": ""}}, {name: "Jerry", bio: "Hey, I'm Jerry Huang, a Grade 10 pre-IB student at STFX and a proud marketing member at AIVolution. Passionate about creating change and educating others on AI's future, I bring coding skills in Python and Java to the table. Outside AIVolution, you'll find me enjoying basketball and badminton.", links: {"linkedin": "", "gmail": "", "instagram": "xxjxrry_"}}]
+            members: [{name: "Akshitha", bio: "Hey, I'm Akshitha! I'm the head of marketing at AiVolution! I mainly handle the marketing team and control how the posts get uploaded. I recently joined the team in November and then had to chance to lead my own marketing subunit in December. I thoroughly enjoy being with both teams, and apart from being with AiVolution, I enjoy baking, cooking, and listening to music :)", links: {"linkedin": "https://www.linkedin.com/in/akshitha-ragavan-a882ab282/", "gmail": "", "instagram": "unhakied"}}, {name: "Adam", bio: "Hi! I am currently a high school student who is passionate about AI, computers and anything STEM related. I try to keep an open-mind and to always keep learning and improving. Besides academics, I enjoy playing video games, and table tennis. My goal at AiVolution is to help others and encourage them to learn more about AI.", links: {"linkedin": "", "gmail": "", "instagram": ""}}, {name: "Arjun", bio: "Hello, I am Arjun Garg. I am a general member at Aivolution and I love working in promotion. I love business and am intrigued by AI. I can’t wait to see where we can take Aivolution!", links: {"linkedin": "", "gmail": "", "instagram": ""}}, {name: "Jerry", bio: "Hey, I'm Jerry Huang, a Grade 10 pre-IB student at STFX and a proud marketing member at AIVolution. Passionate about creating change and educating others on AI's future, I bring coding skills in Python and Java to the table. Outside AIVolution, you'll find me enjoying basketball and badminton.", links: {"linkedin": "", "gmail": "", "instagram": "xxjxrry_"}}, {name: "Maryam", bio: "Hi! I'm Maryam khan and I'm an outreach member for AiVolution! I'm a art enthusiast with a newfound passion of tech that i strive to partake in alongside my karate and graphic design journey. I cant wait for AiVolution's upcoming events!", links: {"linkedin": "", "gmail": "", "instagram": ""}}]
         },
         {
             role: "Outreach Members",
-            members: [{name: "Chris", bio: "My name is Chris, I'm currently a student at GlenForest Secondary School and I work as an outreach general member for Aivolution. I enjoy playing sports and I am passionate about artificial intelligence and how it can improve our lives.", links: {"linkedin": "", "gmail": "", "instagram": "yk_chris.08"}}, {name: "Mustfa", bio: "Hi! I am a high school student who is passionate about AI and other areas of STEM, such as engineering. I have participated in several coding and math competitions and achieved high placements in a few. When I grow up, I want to pursue a career in IT. Besides academics, I enjoy playing basketball and video games. My goal in AiVolution is to help the youth with open opportunities regarding STEM. ", links: {"linkedin": "", "gmail": "mustfa204695@gmail.com", "instagram": "mustfaaa_._._"}}, {name: "Ryan", bio: "Hi, my name is Ryan. I am currently in high school and find the evolution of AI exciting and fascinating. An interest of mine is computer science and anything related to it. However, some other interests of mine that are not in the realm of computer science are movies and basketball. Overall, I find all of these topics very unique and compelling.", links: {"linkedin": "https://www.linkedin.com/in/ryan-huo-37222a2a1/", "gmail": "", "instagram": ""}}, {name: "Maryam", bio: "Hi! I'm Maryam khan and I'm an outreach member for AiVolution! I'm a art enthusiast with a newfound passion of tech that i strive to partake in alongside my karate and graphic design journey. I cant wait for AiVolution's upcoming events!", links: {"linkedin": "", "gmail": "", "instagram": ""}}]
+            members: [{name: "Chris", bio: "My name is Chris, I'm currently a student at GlenForest Secondary School and I work as an outreach general member for Aivolution. I enjoy playing sports and I am passionate about artificial intelligence and how it can improve our lives.", links: {"linkedin": "", "gmail": "", "instagram": "yk_chris.08"}}, {name: "Mustfa", bio: "Hi! I am a high school student who is passionate about AI and other areas of STEM, such as engineering. I have participated in several coding and math competitions and achieved high placements in a few. When I grow up, I want to pursue a career in IT. Besides academics, I enjoy playing basketball and video games. My goal in AiVolution is to help the youth with open opportunities regarding STEM. ", links: {"linkedin": "", "gmail": "mustfa204695@gmail.com", "instagram": "mustfaaa_._._"}}, {name: "Ryan", bio: "Hi, my name is Ryan. I am currently in high school and find the evolution of AI exciting and fascinating. An interest of mine is computer science and anything related to it. However, some other interests of mine that are not in the realm of computer science are movies and basketball. Overall, I find all of these topics very unique and compelling.", links: {"linkedin": "https://www.linkedin.com/in/ryan-huo-37222a2a1/", "gmail": "", "instagram": ""}}]
         },
         {
             role: "Finance Members",
@@ -65,22 +65,28 @@ export default function Home () {
                 </Reveal>
             </div>
 
-            {/* <div className="w-full my-10">
+            <div className="w-full my-20">
                 <Reveal>
                     <div className="w-full flex flex-row justify-center place-items center text-white">
-                        <div className="w-1/2 bg-dark-purple text-center rounded-lg py-8 flex flex-col h-56 justify-evenly gap-4">
+                        <div className="w-1/2 bg-dark-purple text-center rounded-lg py-8 flex flex-col h-56 justify-evenly gap-4 xs:hidden sm:hidden">
                             <h3 className="">Register an account to claim a spot in our next event!</h3>
                             <div className="w-full flex justify-center">
                                 <Link href="/register" className="w-1/2"><button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">REGISTER NOW</button></Link>
                             </div>
                         </div>
+                        <div className="md:hidden lg:hidden xl:hidden 2xl:hidden w-5/6 bg-dark-purple text-center rounded-lg py-8 px-4 flex flex-col justify-evenly gap-4">
+                            <h3 className="">Register an account to claim a spot in our next event!</h3>
+                            <div className="w-full flex justify-center">
+                                <Link href="/register" className="w-5/6"><button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">REGISTER NOW</button></Link>
+                            </div>
+                        </div>
                     </div>
                 </Reveal>
-            </div> */}
+            </div>
 
             <div>
                 <Reveal>
-                    <div className="flex text-justify justify-center place-center leading-loose xs:my-44">
+                    <div className="flex text-justify justify-center place-center leading-loose">
                         <h3 className="w-2/3 xs:text-[1.25em] xs:w-3/4">
                             At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. We are an organization whose mission is to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
                         </h3>
@@ -127,8 +133,8 @@ export default function Home () {
 
             {/* Partners and Sponsors */}
             <div className="w-full flex flex-col place-items-center my-16">
-                <Reveal><h1>Partners</h1></Reveal>
-                <div className="w-5/6 rounded-lg grid grid-cols-1 gap-8 p-8 place-items-center">
+                <Reveal><h1 className="xs:text-[2.5em]">Partners</h1></Reveal>
+                <div className="w-5/6 rounded-lg grid grid-cols-1 gap-8 p-8 place-items-center sm:hidden xs:hidden">
                     
                     {partners.map((partner, i) => (
                         <Reveal key={i}>
@@ -156,6 +162,20 @@ export default function Home () {
                                 </div>
                             }
                             
+                            <hr />
+                        </div>
+                        </Reveal>
+                    ))}
+                </div>
+
+                <div className="hidden xs:w-7/8 sm:w-7/8 xs:rounded-lg sm:rounded-lg xs:grid sm:grid xs:grid-cols-1 sm:grid-cols-1 xs:gap-8 sm:gap-8 xs:p-8 sm:p-8 xs:place-items-center sm:place-items-center">
+                    
+                    {partners.map((partner, i) => (
+                        <Reveal key={i}>
+                        <div className="w-full flex flex-col place-items-center justify-evenly">
+                            <a href={partner.link} target="_blank"><Image src={partner.img} alt="partner" className=""/></a>
+                            <h2 className="text-center text-[1.75em]">{partner.name}</h2>
+                            <p className="text-justify leading-loose">{partner.bio}</p>
                             <hr />
                         </div>
                         </Reveal>
