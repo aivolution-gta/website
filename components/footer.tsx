@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="bg-dark-purple/80 p-4 flex justify-center xs:py-6">
                 <div className="w-full">
                     <form onSubmit={handleEmailSubmit} className="flex w-full justify-center">
-                        <div className="w-1/5 xs:w-1/2 sm:w-1/2 mx-2 text-right flex flex-col justify-center">Subscribe to our newsletter to get the newest updates!</div>
+                        <div className="w-1/5 xs:w-1/2 sm:w-1/2 mx-2 text-right flex flex-col justify-center text-pretty">Subscribe to our newsletter to get the newest updates!</div>
                         <div className="w-1/5 xs:w-1/2 sm:w-1/2 border-l-2 mx-2 px-2 flex flex-col justify-evenly">
                             <input
                                 type="email"
