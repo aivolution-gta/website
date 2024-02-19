@@ -60,7 +60,7 @@ export default function Home () {
                             xs:my-10 xs:mx-10 xs:text-[2.5em]
                         "
                     >
-                        A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br />organization focused around informing people about our technology driven future.
+                        A <span className="inline-block text-mid-purple"><Typewriter options={{strings: ['passionate', 'student-led', 'driven'], autoStart: true, loop: true}}/></span> <br />organization focused around informing youth about our technology driven future.
                     </h1>
                 </Reveal>
             </div>
@@ -69,13 +69,13 @@ export default function Home () {
                 <Reveal>
                     <div className="w-full flex flex-row justify-center place-items center text-white">
                         <div className="w-1/2 bg-dark-purple text-center rounded-lg py-8 flex flex-col h-56 justify-evenly gap-4 xs:hidden sm:hidden">
-                            <h3 className="">Register an account to claim a spot in our next event!</h3>
+                            <h3 className="">Register to claim a spot in our next event!</h3>
                             <div className="w-full flex justify-center">
                                 <Link href="/register" className="w-1/2"><button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">REGISTER NOW</button></Link>
                             </div>
                         </div>
                         <div className="md:hidden lg:hidden xl:hidden 2xl:hidden w-5/6 bg-dark-purple text-center rounded-lg py-8 px-4 flex flex-col justify-evenly gap-4">
-                            <h3 className="">Register an account to claim a spot in our next event!</h3>
+                            <h3 className="">Register to claim a spot in our next event!</h3>
                             <div className="w-full flex justify-center">
                                 <Link href="/register" className="w-5/6"><button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">REGISTER NOW</button></Link>
                             </div>
