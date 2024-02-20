@@ -124,7 +124,7 @@ const RegistrationForm: React.FC = () => {
 
                     <div className="flex flex-col place-items-center bg-dark-purple/10 p-4 my-8">
                         <Checkbox sx={{ color: "#554C89", '&.Mui-checked': { color: "#554C89" } }} checked={termsAndConditions} onChange={(e) => {setTermsAndConditions(e.target.checked)}} required/>
-                        <p>I agree to AiVolution's <a href="/registration/terms-of-service.pdf" target="_blank">terms and conditions</a>. *</p>
+                        <p>I agree to AiVolution&apos;s <a href="/registration/terms-of-service.pdf" target="_blank">terms and conditions</a>. *</p>
                     </div>
                     
                     <div className="flex flex-col place-items-center bg-dark-purple/10 p-4 my-8">
@@ -137,7 +137,7 @@ const RegistrationForm: React.FC = () => {
                             <h2 className="font-bold text-[#1B1541] text-[1.5em] xs:text-[1em] xs:my-[5px] mb-2">
                                 Reference Code (Optional)
                             </h2>
-                            <p>If you have someone else's reference code, enter it here!</p>
+                            <p>If you have someone else&apos;s reference code, enter it here!</p>
                             
                             <input
                                 className="w-1/2 outline-0 mb-[10px] xs:h-[35px] xs:mr-[15px] xs:w-full xs:text-[0.85em] h-[50px] bg-[#1B1541]/20 rounded-lg border-2 border-dark-purple/95 hover:border-black p-3 font-['poppins']"
@@ -163,7 +163,7 @@ const RegistrationForm: React.FC = () => {
             </form>
 
             {errorMessage && (
-                <div className="fixed md:bottom-20 md:left-20 lg:bottom-20 lg:left-20 xl:bottom-20 xl:left-20 sm:top-20 sm:left-20 m-4 h-[55px] w-[1255px]">
+                <div className="fixed md:bottom-20 md:left-20 lg:bottom-20 lg:left-20 xl:bottom-20 xl:left-20 2xl:bottom-20 2xl:left-20 sm:top-20 sm:left-20 m-4 h-[55px] w-[1255px]">
                     <Reveal>
                         <div className="text-center p-5 bg-dark-purple w-1/3 xs:w-1/4 xs:text-[0.85em] rounded-lg text-white relative">
                             <p>{errorMessage}</p>
@@ -179,7 +179,7 @@ const RegistrationForm: React.FC = () => {
                 </div>
             )}
             {successMessage && (
-                <div className="fixed md:bottom-20 md:left-20 lg:bottom-20 lg:left-20 xl:bottom-20 xl:left-20 sm:top-20 sm:left-20 m-4 h-[55px] w-[1255px]">
+                <div className="fixed md:bottom-20 md:left-20 lg:bottom-20 lg:left-20 xl:bottom-20 xl:left-20 2xl:bottom-20 2xl:left-20 sm:top-20 sm:left-20 m-4 h-[55px] w-[1255px]">
                     <Reveal>
                         <div className="text-center p-5 bg-dark-purple w-1/3 xs:w-1/4 xs:text-[0.85em] rounded-lg text-white relative">
                             <p>{successMessage}</p>
