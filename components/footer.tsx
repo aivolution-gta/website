@@ -15,7 +15,7 @@ export default function Footer() {
 
         try {
             setEmailInProgress(true);
-            const response = await axios.post(`https://${hostName}/api/newsletter/add-email`, { email: email });
+            const response = await axios.post(`https://${hostName}/api/newsletter/add-email`, { email: email }, { timeout: 10000 });
             setMessage(response.data.message || 'Email added successfully');
             setEmailInProgress(false);
             setEmail('');

@@ -42,7 +42,7 @@ const RegistrationForm: React.FC = () => {
 
         // Api
         try {
-            const registrationResponse = await axios.post(`https://${hostName}/api/conference/register`, { firstName: firstName, lastName: lastName, email: email, termsAndConditions: termsAndConditions, referenceCode: referenceCode });
+            const registrationResponse = await axios.post(`/api/conference/register`, { firstName: firstName, lastName: lastName, email: email, termsAndConditions: termsAndConditions, referenceCode: referenceCode }, { timeout: 10000 });
 
             if (registrationResponse.status === 201) {
                 // Clear user inputs
@@ -55,7 +55,7 @@ const RegistrationForm: React.FC = () => {
             }
 
             if (newsletterEmails) {
-                const newsletterResponse = await axios.post(`https://${hostName}/api/newsletter/add-email`, { email: email })
+                const newsletterResponse = await axios.post(`/api/newsletter/add-email`, { email: email }, { timeout: 10000 })
 
                 if (newsletterResponse.status === 201) {
                     setSuccessMessage('Newsletter email added successfully.')
