@@ -1,10 +1,10 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 import axios from "axios";
 
 export default function Footer() {
-
+    const [hostName, setHostName] = useState('');
     const [email, setEmail] = useState('');
     const [emailIsValid, setEmailIsValid] = useState(false);
     const [message, setMessage] = useState('');
@@ -15,7 +15,7 @@ export default function Footer() {
 
         try {
             setEmailInProgress(true);
-            const response = await axios.post("/api/newsletter/add-email", { email: email });
+            const response = await axios.post(`https://${hostName}/api/newsletter/add-email`, { email: email });
             setMessage(response.data.message || 'Email added successfully');
             setEmailInProgress(false);
             setEmail('');
@@ -30,6 +30,10 @@ export default function Footer() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         setEmailIsValid(emailRegex.test(email))
     }
+
+    useEffect(() => {
+        setHostName(window.location.hostname);
+    }, []);
 
     return(
         <div className="mt-20 text-white bottom-0 w-screen">

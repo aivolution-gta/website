@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { Reveal } from '../reveal';
 import axios from "axios";
@@ -6,6 +6,7 @@ import { Checkbox } from "@mui/material";
 
 
 const RegistrationForm: React.FC = () => {
+    const [hostName, setHostName] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -41,7 +42,7 @@ const RegistrationForm: React.FC = () => {
 
         // Api
         try {
-            const registrationResponse = await axios.post('/api/conference/register', { firstName: firstName, lastName: lastName, email: email, termsAndConditions: termsAndConditions, referenceCode: referenceCode });
+            const registrationResponse = await axios.post(`https://${hostName}/api/conference/register`, { firstName: firstName, lastName: lastName, email: email, termsAndConditions: termsAndConditions, referenceCode: referenceCode });
 
             if (registrationResponse.status === 201) {
                 // Clear user inputs
@@ -54,7 +55,7 @@ const RegistrationForm: React.FC = () => {
             }
 
             if (newsletterEmails) {
-                const newsletterResponse = await axios.post('/api/newsletter/add-email', { email: email })
+                const newsletterResponse = await axios.post(`https://${hostName}/api/newsletter/add-email`, { email: email })
 
                 if (newsletterResponse.status === 201) {
                     setSuccessMessage('Newsletter email added successfully.')
@@ -66,6 +67,10 @@ const RegistrationForm: React.FC = () => {
             console.log(error.message);
         }
     }
+
+    useEffect(() => {
+        setHostName(window.location.hostname);
+    }, []);
 
     return (
         <div className="w-full">
