@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import Image from "next/image";
 import MuiModal from "@/components/modal";
+import { GoKebabHorizontal } from "react-icons/go";
 
 import SteamIc from "../public/partners/steam-ic.png";
 
@@ -27,11 +28,11 @@ export default function Home () {
             members: [{name: "Praney", bio: "Hi, my name is Praney. I'm a Grade 10 High School student and I'm the Head of Design at AiVolution. I enjoy most things art and technology related for as long as I remember. My goal at AiVolution is to help the organization and its own goals with what I can offer.", links: {"linkedin": "", "gmail": "praneyshivam@gmail.com", "instagram": "praney0"}}, {name: "Salma", bio: "Sophomore with a passion for art, showcasing creativity in every project. Adaptable and diligent, I approach my work with enthusiasm and dedication.", links: {"linkedin": "", "gmail": "", "instagram": ""}}, {name: "Asmetha", bio: "I'm Asmetha Thanarajh, a member of the Graphic Design team at Aivolution. My professional journey centers on graphic design, where I bring creativity to the forefront. Outside work, I enjoy Bharatanatyam and painting.", links: {"linkedin": "", "gmail": "", "instagram": "thaamaraii_"}}]
         },
         {
-            role: "Marketing Members",
+            role: "Marketing and Outreach",
             members: [{name: "Farhan", bio: "My name is Farhan Farhat and I am a executive of the outreach and marketing team for Aivolution. I'm a IB Grade 10 student attending Glenforest Secondary School. I'm an outgoing and extroverted person. I love learning more and more about the world around us and hope to become a neurosurgeon and persue a positive life. My hobbies including playing soccer, paying video games and cooking.", links: {"linkedin": "https://www.linkedin.com/in/farhan-farhat-7490662b8/", "gmail": "", "instagram": "farhan_ferret"}}, {name: "Arjun", bio: "Hello, I am Arjun Garg. I am a general member at Aivolution and I love working in promotion. I love business and am intrigued by AI. I can’t wait to see where we can take Aivolution!", links: {"linkedin": "", "gmail": "", "instagram": ""}}, {name: "Jerry", bio: "Hey, I'm Jerry Huang, a Grade 10 pre-IB student at STFX and a proud marketing member at AIVolution. Passionate about creating change and educating others on AI's future, I bring coding skills in Python and Java to the table. Outside AIVolution, you'll find me enjoying basketball and badminton.", links: {"linkedin": "", "gmail": "", "instagram": "xxjxrry_"}}, {name: "Chris", bio: "My name is Chris, I'm currently a student at GlenForest Secondary School and I work as an outreach general member for Aivolution. I enjoy playing sports and I am passionate about artificial intelligence and how it can improve our lives.", links: {"linkedin": "", "gmail": "", "instagram": "yk_chris.08"}}, {name: "Mustfa", bio: "Hi! I am a high school student who is passionate about AI and other areas of STEM, such as engineering. I have participated in several coding and math competitions and achieved high placements in a few. When I grow up, I want to pursue a career in IT. Besides academics, I enjoy playing basketball and video games. My goal in AiVolution is to help the youth with open opportunities regarding STEM. ", links: {"linkedin": "", "gmail": "mustfa204695@gmail.com", "instagram": "mustfaaa_._._"}}, {name: "Ryan", bio: "Hi, my name is Ryan. I am currently in high school and find the evolution of AI exciting and fascinating. An interest of mine is computer science and anything related to it. However, some other interests of mine that are not in the realm of computer science are movies and basketball. Overall, I find all of these topics very unique and compelling.", links: {"linkedin": "https://www.linkedin.com/in/ryan-huo-37222a2a1/", "gmail": "", "instagram": ""}}, {name: "Angela", bio: "Hello!  My name is Angela, a student at St. Francis Xavier Secondary School and an outreach general member for Aivolution. I enjoy art, music and dance. I am intrigued by the medical field but would also like to explore different ways for AI to make a positive impact on the world.", links: {"linkedin": "", "gmail": "", "instagram": ""}}]
         },
         {
-            role: "Finance Members",
+            role: "Finance",
             members: [{name: "Anuhya", bio: "As the Head of Finance at Aivolution, a non-profit organization dedicated to educate a bigger community provoking conferences on AI and our future! Here at Aivolution I spearhead financial strategy, management, and leadership. Proudly embracing my passion for mathematics and programming, showcasing proficiency in web development. Its an honor to work with such a greatly coordinated team :)", links: {"linkedin": "https://www.linkedin.com/in/anuhya-krishna-nakka-b65a1b27a/", "gmail": "anuhya.ash@gmail.com", "instagram": "anuhya_krishnas"}}]
         },
     ]
@@ -83,7 +84,7 @@ export default function Home () {
             <div>
                 <Reveal>
                     <div className="flex text-justify justify-center place-center leading-loose">
-                        <h3 className="w-2/3 xs:text-[1.25em] xs:w-3/4">
+                        <h3 className="w-2/3 xs:text-[1em] xs:w-3/4">
                             At AiVolution, we are passionate about the infinite possibilities that technology offers and are dedicated to fostering a community that shares this enthusiasm. We are an organization whose mission is to be at the forefront of the ever-evolving world of technology by bringing people together through a series of exceptional events and conferences.
                         </h3>
                     </div>
@@ -157,8 +158,6 @@ export default function Home () {
                                     </div>
                                 </div>
                             }
-                            
-                            <hr />
                         </div>
                         </Reveal>
                     ))}

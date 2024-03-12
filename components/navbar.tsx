@@ -66,6 +66,7 @@ export default function Navbar () {
                         {links.map(({name, link, id}) => 
                             <Link key={id} href={link} className={`w-full h-full pr-6 py-2 hover:bg-[#AAAAAA] ${ id == '0' ? 'hover:rounded-t-md' : (id == (links.length - 1).toString() ? "hover:rounded-b-md" : "") }`}>{name}</Link>
                         )}
+                        <Link key={"register"} href={"/register"} className={`w-full h-full pr-6 py-2 hover:bg-[#AAAAAA]`}>Register</Link>
                     </div>
                 }
                 
