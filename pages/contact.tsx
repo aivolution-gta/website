@@ -21,7 +21,7 @@ export default function Contact() {
                 </div>
             </Reveal>
 
-            <div className="flex items-center justify-center flex grow">
+            <div className="flex items-center justify-center flex grow xs:mt-20">
                 <div className="flex items-center justify-center flex-col md:w-[939px] xs:h-[100px] mx-10 my-8 xs:my-2">
                     <Reveal>
                         <h2 className="font-bold text-gray-950 text-lg mb-3 text-center xs:text-[1em]">

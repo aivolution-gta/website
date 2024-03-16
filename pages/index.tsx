@@ -143,15 +143,15 @@ export default function Home () {
                                         <a href={partner.link} target="_blank"><Image src={partner.img} alt="partner" className=""/></a>
                                     </div>
                                     <div className="col-span-2 flex flex-col justify-evenly">
-                                        <h2 className="text-center">{partner.name}</h2>
-                                        <p className="text-justify leading-loose">{partner.bio}</p>
+                                        <h2 className="text-center ">{partner.name}</h2>
+                                        <p className="text-justify leading-loose xs:text-[1em]">{partner.bio}</p>
                                     </div>
                                 </div>
                                 :
-                                <div className="rounded-md p-2 grid grid-cols-3 w-full m-4">
+                                <div className="rounded-md p-2 grid grid-cols-3 w-full m-4 ">
                                     <div className="col-span-2 flex flex-col justify-evenly">
                                         <h2 className="text-center">{partner.name}</h2>
-                                        <p className="text-justify leading-loose">{partner.bio}</p>
+                                        <p className="text-justify leading-loose xs:text-[1em]">{partner.bio}</p>
                                     </div>
                                     <div className="w-full flex justify-center">
                                         <a href={partner.link} target="_blank"><Image src={partner.img} alt="partner" className=""/></a>
@@ -185,7 +185,7 @@ export default function Home () {
             <div className="flex justify-center">
                 <div 
                     className="
-                        my-20 text-center p-8 bg-dark-purple w-1/3 rounded-lg text-white 
+                        my-20 xs:my-10 text-center xs:p-4 p-8 bg-dark-purple w-1/3 rounded-lg text-white 
                         xs:w-5/6"
                     >
                     <p>Interested in supporting our mission? Click <Link href="/contact">here</Link>!</p>
