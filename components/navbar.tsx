@@ -51,7 +51,8 @@ export default function Navbar () {
                 )}
                 <Link
                         key={"3"}
-                        href={"/register"}
+                        href={"https://03t6nasryb0.typeform.com/to/EbPVOI9p"}
+                        target="_blank"
                         className="hover:bg-white/75 bg-mid-purple text-white mx-4 px-4 py-4 my-auto transition-all rounded-lg hover:text-mid-purple duration-300"
                 >
                     Register
@@ -66,7 +67,7 @@ export default function Navbar () {
                         {links.map(({name, link, id}) => 
                             <Link key={id} href={link} className={`w-full h-full pr-6 py-2 hover:bg-[#AAAAAA] ${ id == '0' ? 'hover:rounded-t-md' : (id == (links.length - 1).toString() ? "hover:rounded-b-md" : "") }`}>{name}</Link>
                         )}
-                        <Link key={"register"} href={"/register"} className={`w-full h-full pr-6 py-2 hover:bg-[#AAAAAA]`}>Register</Link>
+                        <Link key={"3"} href={"https://03t6nasryb0.typeform.com/to/EbPVOI9p"} target="_blank" className={`w-full h-full pr-6 py-2 hover:bg-[#AAAAAA]`}>Register</Link>
                     </div>
                 }
                 
