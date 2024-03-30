@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="mt-20 text-white bottom-0 w-screen">
             <div className="bg-dark-purple/80 p-4 flex justify-center xs:py-6">
                 <div className="w-full flex justify-center text-center">
-                    <div className="w-1/2 xs:w-1/2 sm:w-1/2 mx-2 flex flex-col justify-center text-center"><a href="https://03t6nasryb0.typeform.com/to/CHm4Dnun" className="underline text-white hover:text-beige transition-all" target="_blank">Subscribe to our newsletter to get the newest updates!</a></div>
+                    <div className="w-1/2 xs:w-1/2 sm:w-1/2 mx-2 flex flex-col justify-center text-center"><a href="https://fm.addxt.com/form/?vf=1FAIpQLSfpgiWRgNzn2t8yADH6-4Rn-2SMBT9dfpIfoEPtOU7ooHEvyA" className="underline text-white hover:text-beige transition-all" target="_blank">Subscribe to our newsletter to get the newest updates!</a></div>
                     {/* <form onSubmit={handleEmailSubmit} className="flex w-full justify-center">
                         <div className="w-1/5 xs:w-1/2 sm:w-1/2 border-l-2 mx-2 px-2 flex flex-col justify-evenly">
                             <input
