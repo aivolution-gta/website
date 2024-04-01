@@ -64,13 +64,13 @@ export default function Home () {
                         <div className="w-1/2 bg-dark-purple text-center rounded-lg py-8 flex flex-col h-56 justify-evenly gap-4 xs:hidden sm:hidden">
                             <h3 className="">Register to claim a spot in our next event!</h3>
                             <div className="w-full flex justify-center">
-                                <Link href="/register" className="w-1/2"><button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">REGISTER NOW</button></Link>
+                                <Link href="https://fm.addxt.com/form/?vf=1FAIpQLScSKD0YIgnXS-_FB12nXEOKRw0Cw7C9wKWDkUJB75rrlELpIA" target="_blank" className="w-1/2"><button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">REGISTER NOW</button></Link>
                             </div>
                         </div>
                         <div className="md:hidden lg:hidden xl:hidden 2xl:hidden w-5/6 bg-dark-purple text-center rounded-lg py-8 px-4 flex flex-col justify-evenly gap-4">
                             <h3 className="">Register to claim a spot in our next event!</h3>
                             <div className="w-full flex justify-center">
-                                <Link href="/register" className="w-5/6"><button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">REGISTER NOW</button></Link>
+                                <Link href="https://fm.addxt.com/form/?vf=1FAIpQLScSKD0YIgnXS-_FB12nXEOKRw0Cw7C9wKWDkUJB75rrlELpIA" target="_blank" className="w-5/6"><button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">REGISTER NOW</button></Link>
                             </div>
                         </div>
                     </div>
