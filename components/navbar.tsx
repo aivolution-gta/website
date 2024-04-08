@@ -21,6 +21,11 @@ const links = [
         link: "/contact",
         id: "2",
     },
+    {
+        name: "Blog",
+        link: "/blog",
+        id: "2",
+    },
 ];
 
 export default function Navbar () {
