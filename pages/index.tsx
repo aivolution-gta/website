@@ -1,12 +1,13 @@
+import { useState } from "react";
+
 import { Reveal } from "@/components/reveal";
 import Accordion from "@/components/accordion";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import Image from "next/image";
 import MuiModal from "@/components/modal";
-import { GoKebabHorizontal } from "react-icons/go";
 
-import SteamIc from "../public/partners/steam-ic.png";
+import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 
 export default function Home () {
 
@@ -21,7 +22,7 @@ export default function Home () {
         },
         {
             role: "Developers",
-            members: [{name: "Sohum", bio: "As the tech head of AiVolution, I have always been interested in creating and developing applications. Recently, I've gained a passion for web development, and creating websites is one of my favourite pastimes. I have been programming for over 5 years now, and I don't plan to give it up because of how rewarding it is. Aside from that, my interests include mathematics, playing volleyball, and playing chess.", links: {"linkedin": "https://www.linkedin.com/in/sohum-padhye/", "gmail": "sohum.padhye@gmail.com", "instagram": "sohum.padhye"}}, {name: "Aryan", bio: "Eager to embark on a journey of professional growth, I'm a high school student with a desire to gain knowledge in Programming and Computer Science. Through a combination of academic excellence, extracurricular involvement, and a thirst for knowledge, I am dedicated to improving my skills and gaining valuable experiences.", links: {"linkedin": "https://www.linkedin.com/in/aryan-vasudevan", "gmail": "vasudevan.aryan@gmail.com", "instagram": "aryaan_v"}}, {name: "Toby", bio: "Hey, I'm Toby, a Grade 10 student and a Tech Team member at AiVolution. I am passionate about coding and making projects such as websites + Minecraft plugins and I also enjoy robotics. I am dedicated to using my skills and knowledge to improve and benefit AiVolution to the best of my ability.", links: {"linkedin": "", "gmail": "", "instagram": "tobyz0629"}}]
+            members: [{name: "Sohum", bio: "As the tech head of AiVolution, I have always been interested in creating and developing applications. Recently, I've gained a passion for web development, and creating websites is one of my favourite pastimes. I have been programming for over 5 years now, and I don't plan to give it up because of how rewarding it is. Aside from that, my interests include mathematics, playing volleyball, and playing chess.", links: {"linkedin": "https://www.linkedin.com/in/sohum-padhye/", "gmail": "sohum.padhye@gmail.com", "instagram": "sohum.padhye"}}, {name: "Aryan", bio: "Eager to embark on a journey of professional growth, I'm a high school student with a desire to gain knowledge in Programming and Computer Science. Through a combination of academic excellence, extracurricular involvement, and a thirst for knowledge, I am dedicated to improving my skills and gaining valuable experiences.", links: {"linkedin": "https://www.linkedin.com/in/aryan-vasudevan", "gmail": "vasudevan.aryan@gmail.com", "instagram": "aryaan_v"}}]
         },
         {
             role: "Design",
@@ -39,12 +40,39 @@ export default function Home () {
 
     const partners = [
         {
-            name: "Steam Innovation Challenge", 
-            link: "https://steaminnovationchallenge.org/", 
-            bio: "The STEAM Innovation Challenge is an Ontario-wide competition that allows youth the opportunity to innovate and solve real-world problems in the fields of astronomy,  engineering, or life sciences. Participants present their innovation at STEAM ICAC (held in Toronto) where they can network with industry professionals. Those who rank at STEAM ICAC earn the STEAM IC Trophy, a cash prize, and university recognition.", 
-            img: SteamIc
+            name: "name", 
+            link: "link", 
+            bio: "bio", 
+            img: "img"
         }
     ];
+
+    const faq = [
+        {
+            question: "aaaaaaaaaaaaaaaaaa",
+            answer: "a1"
+        },
+        {
+            question: "q2",
+            answer: "a2"
+        },
+        {
+            question: "q3",
+            answer: "a3"
+        },
+        {
+            question: "q4",
+            answer: "a4"
+        },
+        {
+            question: "q5",
+            answer: "a5"
+        },
+        {
+            question: "q6",
+            answer: "a6"
+        },
+    ]
 
     return (
         <div className="w-screen">
@@ -129,7 +157,7 @@ export default function Home () {
             </div>
 
             {/* Partners and Sponsors */}
-            <div className="w-full flex flex-col place-items-center my-16">
+            {/* <div className="w-full flex flex-col place-items-center my-16">
                 <Reveal><h1 className="xs:text-[2.5em]">Partners</h1></Reveal>
                 <div className="w-5/6 rounded-lg grid grid-cols-1 gap-8 p-8 place-items-center sm:hidden xs:hidden">
                     
@@ -175,11 +203,11 @@ export default function Home () {
                         </div>
                         </Reveal>
                     ))}
-                </div>
+                </div> */}
 
                 {/* <h1>Sponsors</h1>
                 <div className=""></div> */}
-            </div>
+            {/* </div> */}
 
             {/* Sponsor Message */}
             <div className="flex justify-center">
@@ -191,6 +219,38 @@ export default function Home () {
                     <p>Interested in supporting our mission? Click <Link href="/contact">here</Link>!</p>
                 </div>
             </div>
+
+            {/* FAQ */}
+            {/* <div className="flex flex-col place-items-center">
+                <h1>FAQ</h1>
+                <div className="grid grid-cols-2 gap-4">
+                    {faq.map((item, key) =>
+                        <div className="w-full" key={key}><FAQItem question={item["question"]} answer={item["answer"]} /></div>
+                    )}
+                </div>
+            </div> */}
         </div>
     );
+}
+
+interface FAQProps {
+    question: string
+    answer: string
+}
+
+function FAQItem({question, answer}: FAQProps) {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div className="w-full">
+            <div className="border-b-2 flex justify-between gap-4 hover:cursor-pointer" onClick={() => {setIsOpen(!isOpen)}}>
+                <h3>{question}</h3>
+                <h3 className="flex flex-col justify-center">{isOpen ? <CiCircleMinus /> : <CiCirclePlus />}</h3>
+            </div>
+            <div className={`${!isOpen ? "hidden" : "block"}`}>
+                <p>{answer}</p>
+            </div>
+        </div>
+    )
 }
