@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const COUNTDOWN_FROM = "12/12/9999"
+const COUNTDOWN_FROM = "05/18/2024"
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
@@ -50,14 +50,14 @@ const ShiftingCountdown = () => {
     <div className="w-screen p-4 flex flex-row justify-center text-center">
       <div className="flex w-full justify-evenly place-center xs:flex-col sm:flex-col">
         
-        {/* <CountdownItem num={`${remaining.days}`} text="days" />
+        <CountdownItem num={`${remaining.days}`} text="days" />
         <CountdownItem num={`${remaining.hours}`} text="hours" />
         <CountdownItem num={`${remaining.minutes}`} text="minutes" />
-        <CountdownItem num={`${remaining.seconds}`} text="seconds" /> */}
-        <CountdownItem num="??" text="days" />
+        <CountdownItem num={`${remaining.seconds}`} text="seconds" />
+        {/* <CountdownItem num="??" text="days" />
         <CountdownItem num="??" text="hours" />
         <CountdownItem num="??" text="minutes" />
-        <CountdownItem num="??" text="seconds" />
+        <CountdownItem num="??" text="seconds" /> */}
       </div>
     </div>
   );

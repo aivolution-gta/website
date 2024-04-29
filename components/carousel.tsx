@@ -10,17 +10,17 @@ export function CarouselDefault() {
         {
             src: pic3,
             num: "3",
-            link: "https://www.instagram.com/p/C2_Df97LJU8/"
+            link: "https://www.instagram.com/p/C4wHZNercm7/"
         },
         {
             src: pic2,
             num: "2",
-            link: "https://www.instagram.com/p/C25ykGTrQ67/"
+            link: "https://www.instagram.com/p/C5Oxiqapp15/"
         },
         {
             src: pic1,
             num: "1",
-            link: "https://www.instagram.com/p/C2VMSPMr0GG/"
+            link: "https://www.instagram.com/p/C5_3jmgJi5h/"
         }
     ]
 
