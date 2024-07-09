@@ -122,7 +122,7 @@ export default function Home() {
                     <h1
                         className="
                             block text-left my-20 ml-40 mr-32 text-[6em]
-                            xs:my-10 xs:mx-10 xs:text-[2.5em]
+                            xs:my-10 xs:mx-10 xs:text-[2em]
                         "
                     >
                         A{" "}
@@ -146,7 +146,7 @@ export default function Home() {
                 </Reveal>
             </div>
 
-            <div className="w-full my-20">
+            <div className="w-full my-20 xs:my-10">
                 <Reveal>
                     <div className="w-full flex flex-row justify-center place-items center text-white">
                         <div className="w-1/2 bg-dark-purple text-center rounded-lg py-8 flex flex-col h-56 justify-evenly gap-4 xs:hidden sm:hidden">
@@ -166,7 +166,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="md:hidden lg:hidden xl:hidden 2xl:hidden w-5/6 bg-dark-purple text-center rounded-lg py-8 px-4 flex flex-col justify-evenly gap-4">
-                            <h3 className="">
+                            <h3 className="text-[1.2em]">
                                 Register to claim a spot in our next event!
                             </h3>
                             <div className="w-full flex justify-center">
@@ -175,7 +175,7 @@ export default function Home() {
                                     target="_blank"
                                     className="w-5/6"
                                 >
-                                    <button className="w-full bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">
+                                    <button className="w-full xs:text-[1em] bg-light-purple leading-loose rounded-md text-white transition-all duration-1000 ease-in-out hover:bg-mid-purple hover:tracking-widest text-2xl">
                                         REGISTER NOW
                                     </button>
                                 </Link>
@@ -188,7 +188,7 @@ export default function Home() {
             <div>
                 <Reveal>
                     <div className="flex text-justify justify-center place-center leading-loose">
-                        <h3 className="w-2/3 xs:text-[1em] xs:w-3/4">
+                        <h3 className="w-2/3 xs:text-[0.9em] xs:w-5/6">
                             At AiVolution, we are passionate about the infinite
                             possibilities that technology offers and are
                             dedicated to fostering a community that shares this
@@ -202,8 +202,8 @@ export default function Home() {
             </div>
 
             {/* Team */}
-            <div className="mt-20">
-                <div className="w-full">
+            <div className="mt-20 xs:hidden">
+                <div className="w-full ">
                     <Reveal>
                         <div className="flex justify-center place-center my-8">
                             <h1 className="xs:text-[2.5em]">Meet Our Team</h1>
@@ -211,25 +211,19 @@ export default function Home() {
                     </Reveal>
 
                     <Reveal>
-                        <div className="grid gap-4 mx-10 sm:hidden xs:hidden">
-                            <div className="">
-                                    <div
-                                        className={`grid grid-cols-2 text-center gap-4`}
-                                    >
-                                        {teamData.map((person, i) => (
-                                            <div
-                                                className="col-span-1 border-2 border-dark-purple rounded-md select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105"
-                                                key={i}
-                                            >
-                                                <MuiModal
-                                                    name={person.name}
-                                                    bio={person.bio}
-                                                    links={person.links}
-                                                />
-                                            </div>
-                                        ))}
-                                    </div>
-                            </div>
+                        <div className="grid mx-auto w-2/3 sm:hidden xs:hidden grid-cols-2 gap-8">
+                            {teamData.map((person, i) => (
+                                <div
+                                    className="col-span-1 border-2 border-dark-purple rounded-md select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105"
+                                    key={i}
+                                >
+                                    <MuiModal
+                                        name={person.name}
+                                        bio={person.bio}
+                                        links={person.links}
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </Reveal>
                 </div>
@@ -246,7 +240,7 @@ export default function Home() {
                         my-20 xs:my-10 text-center xs:p-4 p-8 bg-dark-purple w-1/3 rounded-lg text-white 
                         xs:w-5/6"
                 >
-                    <p>
+                    <p className="xs:text-[1.2em]">
                         Interested in supporting our mission? Click{" "}
                         <Link href="/contact">here</Link>!
                     </p>
