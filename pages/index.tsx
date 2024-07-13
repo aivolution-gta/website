@@ -202,7 +202,7 @@ export default function Home() {
             </div>
 
             {/* Team */}
-            <div className="mt-20 xs:hidden">
+            <div className="mt-20">
                 <div className="w-full ">
                     <Reveal>
                         <div className="flex justify-center place-center my-8">
@@ -211,7 +211,7 @@ export default function Home() {
                     </Reveal>
 
                     <Reveal>
-                        <div className="grid mx-auto w-2/3 sm:hidden xs:hidden grid-cols-2 gap-8">
+                        <div className="grid mx-auto w-2/3  grid-cols-2 gap-8">
                             {teamData.map((person, i) => (
                                 <div
                                     className="col-span-1 border-2 border-dark-purple rounded-md select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105"
