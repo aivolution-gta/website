@@ -89,28 +89,38 @@ export default function Home() {
 
     const faq = [
         {
-            question: "aaaaaaaaaaaaaaaaaa",
-            answer: "a1",
+            question: "What does AiVolution do?",
+            answer: "AiVolution is a student-run organization that provides informative and collaborative workshops for youth to be educated on the implications of AI and technology in our society.",
         },
         {
-            question: "q2",
-            answer: "a2",
+            question: "How much does it cost to attend an event?",
+            answer: "The usual price range for our events is between $5 to $15, depending on the size of the event, as well as the activities present.",
         },
         {
-            question: "q3",
-            answer: "a3",
+            question: "Why should I attend an AiVolution event?",
+            answer: "If you’re looking for an immersive and informative experience where you can explore and learn about the different technologies and forms of artificial intelligence around you, then our events are exactly what you’re looking for. It’s also fit for a sociable and collaborative experience, as you’ll have the opportunity to meet new people or work on cool activities with friends!",
         },
         {
-            question: "q4",
-            answer: "a4",
+            question:
+                "Can I participate if I have no experience with AI/technology?",
+            answer: "Of course! Our events don’t require any significant knowledge of AI or technology, and while it is suggested that you research a bit about the topics covered at the event in advance, our speakers will explain the topics to you in ways everyone can understand!",
         },
         {
-            question: "q5",
-            answer: "a5",
+            question: "How will AiVolution help me prepare for the future?",
+            answer: "The future of our world will be dominated by tools using AI and technology everywhere. To combat this, AiVolution strives to teach people the implications and ethics behind these tools so that they won't seem overwhelming or scary. You will also be able to hear the experiences of many successful people in the field of technology and learn how to reach the levels they have reached in their careers!",
         },
         {
-            question: "q6",
-            answer: "a6",
+            question:
+                "What are the age requirements/limits to participating in an event?",
+            answer: "Our events have no age requirement as we believe anyone should be able to learn about the implications and ethics of AI. While our target audience is youth (12 - 18), we don’t restrict ourselves to only the youth. However, we strongly suggest not bringing young children/babies (under the age of 6) to the events, as we do not have the resources to cater to this age group to prevent disruptive behaviour.",
+        },
+        {
+            question: "What if I have more questions?",
+            answer: "If you have any more questions that this FAQ does not answer, check out our Instagram page, where we post regularly about our organization. Alternatively, our contact page is present for any emails with your inquiries, and we’ll make sure to respond as soon as possible!",
+        },
+        {
+            question: "What topics will be covered in the events?",
+            answer: "The topics an event covers depend on the theme and the event itself. While our first event was AI and robotic-themed, our next event could be about a completely different topic in tech. To know exactly what topics will be covered, stay tuned to our Instagram page, where we will post the exact theme of our next event closer to the date of it.",
         },
     ];
 
@@ -203,7 +213,7 @@ export default function Home() {
 
             {/* Team */}
             <div className="mt-20">
-                <div className="w-full ">
+                <div className="">
                     <Reveal>
                         <div className="flex justify-center place-center my-8">
                             <h1 className="xs:text-[2.5em]">Meet Our Team</h1>
@@ -211,7 +221,7 @@ export default function Home() {
                     </Reveal>
 
                     <Reveal>
-                        <div className="grid mx-auto w-2/3  grid-cols-2 gap-8">
+                        <div className="grid mx-auto w-2/3 grid-cols-2 gap-8">
                             {teamData.map((person, i) => (
                                 <div
                                     className="col-span-1 border-2 border-dark-purple rounded-md select-none transition-all ease-in-out hover:bg-dark-purple duration-300 hover:cursor-pointer hover:scale-105"
@@ -229,11 +239,31 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* <h1>Sponsors</h1>
-                <div className=""></div> */}
-            {/* </div> */}
+            <div className="mt-20">
+                <Reveal>
+                    <div className="flex justify-center my-8">
+                        <h1 className="xs:text-[2.5em]">FAQ</h1>
+                    </div>
+                </Reveal>
+                <div className="flex justify-center">
+                    <div className="w-2/3">
+                        <div className="grid grid-cols-2 gap-4">
+                            {faq.map((faq_item, index) => (
+                                <Accordion
+                                    key={index}
+                                    title={faq_item.question}
+                                    description={
+                                        <div className="">
+                                            {faq_item.answer}
+                                        </div>
+                                    }
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            {/* Sponsor Message */}
             <div className="flex justify-center">
                 <div
                     className="
@@ -246,16 +276,6 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-
-            {/* FAQ */}
-            {/* <div className="flex flex-col place-items-center">
-                <h1>FAQ</h1>
-                <div className="grid grid-cols-2 gap-4">
-                    {faq.map((item, key) =>
-                        <div className="w-full" key={key}><FAQItem question={item["question"]} answer={item["answer"]} /></div>
-                    )}
-                </div>
-            </div> */}
         </div>
     );
 }

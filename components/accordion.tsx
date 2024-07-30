@@ -13,10 +13,10 @@ export default function Accordion({title, description}: AccordionProps) {
 
     return (
         <div className="text-white my-4">
-            <div className={`border-dark-purple border-2 bg-mid-purple py-[25px] px-[50px] flex justify-between items-center cursor-pointer ${open ? "rounded-t-md" : "rounded-md"}`}
+            <div className={`border-dark-purple border-2 bg-mid-purple py-[15px] px-[50px] flex justify-between items-center cursor-pointer ${open ? "rounded-t-md" : "rounded-md"}`}
                 onClick={() => {setOpen(!open)}}
             >
-                <h3 className="">{title}</h3>
+                <h3 className="text-[1.2em]">{title}</h3>
                 <p className="text-[1.5em]">
                     {open ? <MdExpandLess /> : <MdExpandMore />}
                 </p>
