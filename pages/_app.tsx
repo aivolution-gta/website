@@ -7,12 +7,12 @@ function App ({ Component, pageProps }: AppProps) {
     const router = useRouter();
 
     return (
-        <div>
+        <div className="bg-[#FFECBC]">
             <Layout key={router.pathname}>
                 <Component {...pageProps} />
             </Layout>
         </div>
-    )
+    );
 }
 
 export default App;
